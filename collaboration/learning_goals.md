@@ -46,3 +46,17 @@ critical thinking.
 
 💡 Master data science skills and learn to collaborate effectively with  
 teammates across different time zones.
+
+### 📈 FRANKLINE  
+
+🧠 Apply and deepen my skills in data analytics and machine learning by  
+contributing to real-world data projects.  
+🎯 Become proficient in designing data-driven solutions while improving  
+leadership and teamwork in a diverse, global team setting.
+
+### 📊 IDRIS  
+
+🤝 Learn to work on real-world problems with a collaborative team in an  
+asynchronous environment.  
+🧭 Master the full data science lifecycle with limited time and information,  
+while understanding how data science can solve real business domain problems.
