@@ -29,19 +29,25 @@ how often will we get in touch on each channel, and what we will discuss there:
 
 ## Availability
 
-### Availability for calling/messaging
+### Availability for calling/messaging EST Timezone
 
-| Day    | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |     |
-| ------ | :----: | :-----: | :-------: | :------: | :----: | :------: | :----: | --- |
-| _name_ |        |         |           |          |        |          |        |
+| Day/Name | Mon| Tues| Wed| Thur| Fri| Sat| Sun|
+|----------|------------------|------------------|------------------|------------------|------------------|--------------------|--------------------|
+|*Shadi*|9-11:30am|8-10:30am|9-11:30am|8-10:30am|8-10:30am|7-11:30am|7-11:30am|
+|*Rafaa*|10-12am|10-12am|10-12am|10-12am|12pm|  |                  |
+|*Idris*|9:00-13:00am|9:00-13:00am|9:00-13:00am|9:00-13:00am|9:00-13:00am|    | |
+|*Pyae*|8-12:30am|8-12:30am|8-12:30am|8-12:30am|8-12:30am|8-12:30am|8-12:30am|
+|*Derek*|9:00-12:30pm|9:00-12:30pm|9:00-12:30pm|9:00-12:30pm|9:00-12:30pm|   ||
+|*Frankline*|9:00-12:30pm|9:00-12:30pm|9:00-12:30pm|9:00-12:30pm|9:00-12:30pm|  ||
 
 ### How many hours everyone has per day
 
-- name: _5h_;
-- name: _6h_;
-- name: _5h_;
-- name: _4h_;
-- name: _3h_;
+- Shadi: 2.5 h;
+- Rafaa:  2 h;
+- Idris: 1.5h;
+- Pyae: 2h;
+- Frankline: 1h;
+- Derek: 2h;
 
 ## Asking for Help
 
@@ -49,6 +55,6 @@ There's a fine line between confidently learning from your mistakes, and
 stubbornly getting no where. Here is a general guide for when to ask for help
 based on how long you've been stuck on the same problem:
 
-1. _0 -> 30 min_: Try on your own
-1. _30 -> 60 min_: Ask your group for help
-1. _60+ min_: Tag your coaches in Slack or GitHub
+1. *0 -> 30 min*: Try on your own
+1. *30 -> 60 min*: Ask your group for help
+1. *60+ min*: Tag your coaches in Slack or GitHub
