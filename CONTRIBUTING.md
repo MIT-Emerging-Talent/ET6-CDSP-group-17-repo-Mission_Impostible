@@ -4,7 +4,7 @@ Thank you for joining our team! This document outlines our shared values, expect
 
 ---
 
-## 🤝 Our Intention-Based Group Norms
+##  Our Intention-Based Group Norms
 
 We aim to maintain cognitive and affective trust across all members by committing to these shared intentions:
 
