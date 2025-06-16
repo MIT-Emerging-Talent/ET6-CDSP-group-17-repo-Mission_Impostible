@@ -74,8 +74,3 @@ Returns in e-commerce are not just individual events—they reflect deeper patte
 and structural design issues. This project aims to apply
 **AI (supervised learning)** to detect return risks early and suggest
 design/UX improvements to reduce return rates over time.
-
----
-
-Let me know if you want this auto-formatted into a GitHub-ready markdown file or
-PDF for your project repo.
