@@ -21,7 +21,7 @@ and **mental models** that contribute to them.
 
 ## ⛴️ Iceberg Model – Systems Thinking Approach
 
-### 📌 Event (What We See)
+### 📌 Events
 
 High return rates (15–30%) are common in e-commerce,
 especially in fashion (up to 40%).
