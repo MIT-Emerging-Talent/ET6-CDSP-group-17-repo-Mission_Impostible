@@ -71,6 +71,6 @@ Returns create major operational and financial challenges.
 ## 💡 Summary
 
 Returns in e-commerce are not just individual events—they reflect deeper patterns
-and structural design issues. This project aims to apply
+& structural design issues. This project aims to apply
 **AI (supervised learning)** to detect return risks early and suggest
 design/UX improvements to reduce return rates over time.
