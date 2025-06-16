@@ -1,20 +1,20 @@
 <!-- this template is for inspiration, feel free to change it however you like! -->
 
 # Retrospective
- ### MILSTONE 0
+ ### 🚀 MILSTONE 0
 
 ## Stop Doing
-Excessive analysis during early project phases that hinders progress
-Missing deadlines due to inadequate progress tracking
-Completing tasks at the final moment
+Excessive analysis during early project phases that hinders progress.
+Missing deadlines due to inadequate progress tracking.
+Completing tasks at the final moment.
 ## Continue Doing
-Weekly check-in meetings that monitor progress and maintain alignment
-Strong communication and collaborative teamwork
-Developing clear action plans for each project milestone
+Weekly check-in meetings that monitor progress and maintain alignment.
+Strong communication and collaborative teamwork.
+Developing clear action plans for each project milestone.
 ## Start Doing
-Implementing structured planning tools for enhanced organization
-Dedicating more focus to project board management
-Allocating buffer time for tasks that may exceed initial estimates
+Implementing structured planning tools for enhanced organization.
+Dedicating more focus to project board management.
+Allocating buffer time for tasks that may exceed initial estimates.
 ## Lessons Learned
 Early brainstorming helps refine group decision-making processes
 Effective communication requires timely task execution
@@ -43,7 +43,7 @@ Or remove extra steps?
 No significant process steps were removed
 
 
-### MILSTONE 1
+### 🚀🚀 MILSTONE 1
 
 ## Stop Doing
 planning without established frameworks
