@@ -37,17 +37,17 @@ No significant process steps were removed.
 planning without established frameworks.  
 Working under tight deadline pressure.  
 ##  ✅ Continue Doing
-Meaningful discussions that value all team members' ideas.
-Strong collaborative spirit with full participation.  
-Leveraging varied viewpoints for better decision-making.  
+Meaningful discussions that value all team members' ideas.  
+Strong collaborative spirit with full participation.    
+Leveraging varied viewpoints for better decision-making.    
 ##  🟢 Start Doing
 Structured approach to meetings and work sessions.  
 Defining clear objectives and deliverables upfront.  
 Improved schedule management to prevent time crunches.  
 ##  📚 Lessons Learned
-Consistent communication prevents misalignment and delays. 
-Early domain selection provided essential project focus.
-Iceberg technique and systamic thinkinng enhanced our project comprehension.  
+Consistent communication prevents misalignment and delays.   
+Early domain selection provided essential project focus.  
+Iceberg technique and systamic thinkinng enhanced our project comprehension.   
  
 
 ### 🎯 Strategy vs. Board
