@@ -50,7 +50,7 @@ Early domain selection provided essential project focus.
 Iceberg technique and systamic thinkinng enhanced our project comprehension.  
  
 
-### Strategy vs. Board
+### 🎯 Strategy vs. Board
 
 ## What parts of your plan went as expected?
 Team collaboration was great. 
