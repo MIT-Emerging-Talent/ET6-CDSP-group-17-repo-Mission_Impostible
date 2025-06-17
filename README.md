@@ -22,6 +22,8 @@ Retailers must handle the entire reverse supply chain — inspecting returned it
 
 We believe that by applying data science, we can help uncover insights into what drives returns and how to mitigate them.
 
+To support this effort, the team has compiled a [structured domain study](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-17-repo-Mission_Impostible/blob/main/0_domain_study/README.md), which organizes background research, industry reports, and initial observations to better understand the landscape of the problem.
+
 ---
 
 ## 🧪 Research Question (Work in Progress)
