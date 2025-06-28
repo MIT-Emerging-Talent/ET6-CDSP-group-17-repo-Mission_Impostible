@@ -1,4 +1,1 @@
-Create Git Tag for this milestone:
 
-git tag -a v1.0-dataset-ready -m "Dataset cleaned, split, and documented"
-git push origin v1.0-dataset-ready
