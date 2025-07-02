@@ -98,5 +98,3 @@ The data represent real transactional activity for an online retail site and hav
 - All personal information is **synthetic or anonymised**; no real customer identities are exposed.
 
 ---
-
-> **Tip:** For giant tables like `order_items`, load with `chunksize` or DuckDB if RAM is limited.
