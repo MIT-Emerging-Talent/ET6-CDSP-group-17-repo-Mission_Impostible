@@ -1,68 +1,53 @@
-🛍️ Returns Prediction: Graph-Based vs Tabular E-Commerce Modeling
+# 🛍️ Returns Prediction: Graph-Based vs Tabular E-Commerce Modeling
 
-This project compares two distinct datasets and modeling strategies to understand and predict return behavior in e-commerce platforms:
-	1.	Graph-based approach (ASOS Returns Prediction)
-	2.	Tabular data modeling (TheLook E-Commerce)
+This project compares two datasets and modeling methods to predict returns in e-commerce:
+	1.	Graph-based method (ASOS Returns Prediction)
+	2.	Tabular data method (TheLook E-Commerce)
 
 ⸻
 
-1. 🧠 Modeling Approaches (Non-Technical Overview)
+## 1. 🧠 Modeling Approaches (Non-Technical Overview)
 
 ✅ Why Two Methods?
 
-Return prediction is an important task for e-commerce logistics and customer satisfaction. We explored two modeling strategies:
+Predicting returns is key for e-commerce logistics and customer satisfaction. We tested two methods:
 
-📦 A. Tabular Modeling (TheLook Dataset)
-	•	Each row is a single purchase.
-	•	Features include: product category, customer age, price, shipping latency, etc.
-	•	Model used: Logistic Regression (or other classifiers like XGBoost).
-	•	Advantage: Simple, interpretable, and integrates easily with business rules.
-	•	Limitation: Treats each transaction in isolation.
+📦 A. Tabular Modeling (TheLook Dataset)  
+Each row represents one purchase. Features include product category, customer age, price,
+and shipping time. We use models like Logistic Regression or XGBoost. This method is simple,
+easy to interpret, and fits well with business rules. 
+However, it treats each transaction separately.
 
-🧩 B. Graph Modeling (ASOS Dataset)
-	•	Graph structure:
-	•	Nodes: Customers & Products
-	•	Edges: Purchases (labeled with return = 0/1)
-	•	Model used: Graph Neural Networks (GNNs)
-	•	Advantage: Learns shared return patterns (e.g., product clusters, return-prone users)
-	•	Limitation: No time information, and only includes customers who returned at least once.
+🧩 B. Graph Modeling (ASOS Dataset)  
+The data forms a graph with customers and products as nodes. Edges represent purchases,
+marked as returned or not. We apply Graph Neural Networks (GNNs).
+This method learns shared return patterns, like product groups or return-prone users.
+It lacks time data and only includes customers who returned at least once.
 
 ⸻
-2. 📁 Dataset Documentation
+## 2. 📁 Dataset Documentation
 
-A. ASOS GraphReturns Dataset
-	•	Source: OSF (Open Science Framework)
-	•	Structure:
-	•	Edge list of interactions with return labels
-	•	Anonymized node features (no semantics)
-	•	Known Flaws:
-	•	No timestamps (can’t analyze order sequence or time-based behavior)
-	•	Biased: Only includes customers with at least one return
-	•	How to Recreate:
-	•	Download the dataset from OSF: [ASOS GraphReturns Dataset on OSF](https://osf.io/c793h/)
+A. ASOS GraphReturns Dataset  
+- Source: OSF (Open Science Framework)  
+- Data: Edge list with return labels and anonymous node features  
+- Issues: No timestamps, only customers with returns included  
+- How to get it: Download from OSF: [ASOS GraphReturns Dataset on OSF](https://osf.io/c793h/)
 
-B. TheLook E-Commerce Dataset
-	•	Source: Kaggle (originally from Google BigQuery)
-	•	Structure: Split into 4 CSVs:
-	1.	order_items.csv (transactions)
-	2.	products.csv (SKU data)
-	3.	users.csv (demographics)
-	4.	distribution_centers.csv (fulfillment hubs)
-	•	Known Flaws:
-	•	Missing or null timestamps for some shipping or return fields
-	•	Not all features are consistent across time periods
-	•	Synthetic PII (emails, addresses) used for demo purposes
-	•	How to Recreate:
-	•	Download the dataset from Kaggle: [TheLook Ecommerce Dataset](https://www.kaggle.com/code/aniqohhanahaura/thelook-dataset)
+B. TheLook E-Commerce Dataset  
+- Source: Kaggle (from Google BigQuery)  
+- Files: Four CSVs - order_items.csv, products.csv, users.csv, distribution_centers.csv  
+- Issues: Some missing or null timestamps, inconsistent features over time, synthetic PII used  
+- How to get it: Download from Kaggle: [TheLook Ecommerce Dataset](https://www.kaggle.com/code/aniqohhanahaura/thelook-dataset)
 
 ⸻
 
-📌 Conclusion
+## 📌 Conclusion
 
-Model Type	Suitable For	Not Ideal For
-Tabular	Interpretability, fast deployment, numeric & categorical features	Capturing relationship patterns
-Graph	Complex patterns, user-product co-behaviors	Requires dense data, harder to explain
+| Model Type | Good For                     | Not Good For            |
+|------------|------------------------------|------------------------|
+| Tabular    | Easy to understand and use   | Finding relationships  |
+| Graph      | Detecting complex patterns   | Needs dense data, harder to explain |
 
-Both approaches offer insight into product return behavior from different angles. Use them individually or hybridize for ensemble learning!
+Both methods give useful insights into product returns. Use them alone or together for better results.
 
-Questions or contributions? Open an issue or fork the repo!
+Questions or ideas? Open an issue or fork the repo!
