@@ -1,4 +1,4 @@
-# 📦 Dataset Overview
+# 📦 TheLook Dataset Overview
 
 This project uses an **anonymised e-commerce dataset** derived from Google BigQuery’s public **TheLook** sample (mirrored on Kaggle).  
 The data represent real transactional activity for an online retail site and have been split into four tidy CSV files for ease of use in pandas / scikit-learn notebooks.
