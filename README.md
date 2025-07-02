@@ -1,6 +1,6 @@
-# 🚀 Gemini CLI Project: Predicting Product Returns 📦
+## 🚀 Project: Predicting Product Returns 📦
 
-Welcome to the `Practicey` branch! This branch showcases the work done using the Gemini CLI to analyze and model product returns. Below is a summary of the exciting steps we've taken:
+Welcome to the `Practicey` branch! This branch showcases the work done to analyze and model product returns. Below is a summary of the exciting steps we've taken:
 
 ---
 
