@@ -21,15 +21,16 @@ This notebook creates a clean, modelling-ready feature set from the raw **TheLoo
 
 project_root/
 └─ 1_datasets/
-└─ thelook_Ecommerce/
-├─ distribution_centers.csv
-├─ order_items.csv
-├─ products.csv
-└─ users.csv
+   └─ thelook_Ecommerce/
+      ├─ distribution_centers.csv  
+      ├─ order_items.csv  
+      ├─ products.csv  
+      └─ users.csv  
+
 └─ 2_data_preparation/
-└─theLook_Ecommerce/
-├─ theLook_Data_Preparation.ipynb   ← this notebook
-└─ thelook_returns_features.csv  ← output
+   └─ theLook_Ecommerce/
+      ├─ theLook_Data_Preparation.ipynb   ← this notebook  
+      └─ thelook_returns_features.csv     ← output
 
 ---
 
