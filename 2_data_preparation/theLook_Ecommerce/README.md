@@ -11,7 +11,7 @@ This notebook creates a clean, modelling-ready feature set from the raw **TheLoo
 | 1️⃣ | **Load** the four CSVs | `distribution_centers`, `order_items`, `products`, `users` |
 | 2️⃣ | **Clean & Engineer** | - Flag returns (`RETURN_FLAG`)  <br>- Basket size  <br>- Discount %  <br>- Tenure, shipping latency, time features |
 | 3️⃣ | **Select Columns** | Keep only the features needed for modelling |
-| 4️⃣ | **Save Output** | Writes `thelook_returns_features_v2.csv` to the current folder |
+| 4️⃣ | **Save Output** | Writes `thelook_returns_features.csv` to the current folder |
 
 > **Target variable:** `RETURN_FLAG` &nbsp;•&nbsp; `1 = returned`, `0 = kept`
 
