@@ -19,28 +19,31 @@ This notebook documents our first look at the cleaned feature set and highlights
 ## 3. Overall Return Share  
 
 <img src="images/overall.png" alt="Return Rate Donut Chart" width="400"/>
-- **Returned:** 10 %  
-- **Kept:** 90 %
 
 ---
 
 ## 4. Return Rates by Key Categories
 
-📸 *Insert return rate bar charts here (one for each variable below)*
+### Gender Returns  
+<img src="images/gender.png" alt="Return Rate by Gender" width="400"/>
 
-| Category                     | Return Rate                | Notes                         |
-|------------------------------|----------------------------|-------------------------------|
-| **Gender**                   | Male 10.1%, Female 10.0%   | Very similar behaviour        |
-| **Season**                   | Fall highest               | Mild seasonal variation       |
-| **Product Category**         | Clothing Sets highest      | Common sizing/fit issue       |
-| **Country**                  | Germany 10.5%, Australia 9.6% | Regional difference         |
-| **Distribution Center Name** | Houston TX, Savannah GA ≈ 10.3% | Fulfillment process differences |
+### Season Returns  
+<img src="images/season.png" alt="Return Rate by Season" width="400"/>
+
+### Product Category Returns  
+<img src="images/category.png" alt="Return Rate by Product Category" width="400"/>
+
+### Country Returns  
+<img src="images/country.png" alt="Return Rate by Country" width="400"/>
+
+### Distribution Center Returns  
+<img src="images/dc.png" alt="Return Rate by Distribution Center" width="400"/>
 
 ---
 
 ## 5. Numeric Distributions
 
-📸 *Insert histograms for the following:*
+<img src="images/num.png" alt="Return Rate by num" width="400"/>
 
 - `age`
 - `discount_pct`
@@ -54,7 +57,7 @@ This notebook documents our first look at the cleaned feature set and highlights
 
 ## 6. Correlation Heat-map
 
-📸 *Insert heatmap screenshot here*
+<img src="images/heat.png" alt="Return Rate by num" width="400"/>
 
 - Most numeric features show **weak linear correlation** with `RETURN_FLAG`.
 - Confirms we’ll need **non-linear models** or **categorical features** to explain returns effectively.
