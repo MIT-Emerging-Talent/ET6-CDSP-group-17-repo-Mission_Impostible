@@ -20,6 +20,9 @@ This notebook documents our first look at the cleaned feature set and highlights
 
 <img src="images/overall.png" alt="Return Rate Donut Chart" width="400"/>
 
+- **Returned:** 10%  
+- **Kept:** 90%
+
 ---
 
 ## 4. Return Rates by Key Categories
@@ -27,17 +30,30 @@ This notebook documents our first look at the cleaned feature set and highlights
 ### Gender Returns  
 <img src="images/gender.png" alt="Return Rate by Gender" width="400"/>
 
+- **Male:** 10.1%  
+- **Female:** 10.0%
+
 ### Season Returns  
 <img src="images/season.png" alt="Return Rate by Season" width="400"/>
+
+- **Fall:** highest  
 
 ### Product Category Returns  
 <img src="images/category.png" alt="Return Rate by Product Category" width="400"/>
 
+- **Clothing Sets:** 11.9%  
+- **Common sizing/fit** issue 
+
 ### Country Returns  
 <img src="images/country.png" alt="Return Rate by Country" width="400"/>
 
+- **Germany** 10.5%  
+- **Australia** 9.6%
+
 ### Distribution Center Returns  
 <img src="images/dc.png" alt="Return Rate by Distribution Center" width="400"/>
+
+- **Houston TX**, **Savannah GA** ≈ 10.3%
 
 ---
 
