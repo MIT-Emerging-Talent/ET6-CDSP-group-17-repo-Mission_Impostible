@@ -17,25 +17,17 @@ Using a GNN, we achieved:
 - **F1-score**: 0.792
 - **Lower cross-entropy loss** than baseline models (e.g., logistic regression, random forest)
 
-These results are consistent with findings from [McGowan et al. (2023)](https://arxiv.org/abs/2302.14096) and [Springer’s publication](https://link.springer.com/chapter/10.1007/978-3-031-22192-7_6).
+These results are consistent with findings from [Springer’s publication](https://link.springer.com/chapter/10.1007/978-3-031-22192-7_6).
 
 ##  Limitations
 - **Cold start**: New users/products lack historical data.
 - **Bias**: Return reasons (e.g., sizing, color) are not always captured.
-- **Graph sparsity**: Many customers interact with few products.
+- **Graph sparsity**: Many customers interact with a few products.
 
-## Visual Summary
-![Graph Schema](visuals/graph_structure.png)
 
 ## 🔗 Resources
 - Dataset: [OSF Repository](https://osf.io/c793h/)
-- Paper: [arXiv:2302.14096](https://arxiv.org/abs/2302.14096)
-- GitHub: [fabon/asos-graph-returns](https://github.com/fabon/asos-graph-returns)
 
-## Dataset Documentation: ASOS GraphReturns
-
-### Source
-The dataset is sourced from the ASOS GraphReturns project hosted on the Open Science Framework (OSF): https://osf.io/c793h/.
 
 ### Structure
 - **event_table_training.p / event_table_testing.p**: Purchase events.
