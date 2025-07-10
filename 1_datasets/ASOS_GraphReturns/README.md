@@ -1,7 +1,7 @@
 # Predicting Customer Returns in Fashion Retail with Graph Neural Networks
 
 ##  Project Overview
-This project uses the [ASOS GraphReturns dataset]([https://osf.io/c793h/](https://drive.google.com/drive/folders/1xpCMMrpNtFms7KKrCIVClTbYNZQUcSpg?usp=sharing)) to predict whether a customer will return a purchased item. We model this problem using **Graph Neural Networks (GNNs)**, which are well-suited to the relational structure of the data—customers, products, and transactions form a natural graph.
+This project uses the [ASOS GraphReturns dataset]([https://osf.io/c793h/](https://drive.google.com/drive/folders/1xpCMMrpNtFms7KKrCIVClTbYNZQUcSpg?usp=sharing) to predict whether a customer will return a purchased item. We model this problem using **Graph Neural Networks (GNNs)**, which are well-suited to the relational structure of the data—customers, products, and transactions form a natural graph.
 
 ##  Why Graphs?
 - Customers and products are **nodes**.
