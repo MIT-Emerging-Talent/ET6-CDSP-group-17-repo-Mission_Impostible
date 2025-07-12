@@ -47,7 +47,3 @@
 - [ ] Complete contributor guidelines by **June 12, 2025, 11 AM EST**  
 - [ ] Create labeled Git tag for Milestone 1 by **June 12, 2025, 11 AM EST**  
 - [ ] Share problem ideas and updates in the [Google Document](https://docs.google.com/document/d/13iPKyEAhX499iiJYInLbcRKySS1p4R_upxixYhqclZs/edit?usp=sharing)
-
-```
-
-Let me know if you'd like this saved to a downloadable `.md` file or need help validating it with a Markdown linter.
