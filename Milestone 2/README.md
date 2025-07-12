@@ -1,0 +1,95 @@
+Milestone 2: Data Collec!on - To-Do List
+This checklist outlines the detailed steps and deliverables for our team to successfully complete Milestone 2: Data Collec!on. Use
+this document to track our progress and ensure all requirements are met by the June 30th deadline.
+
+## Domain Modeling: Understanding Our E-commerce World
+
+Our e-commerce domain is modeled around key pieces of information that help us understand our customers, the products we sell, and how orders are processed.
+
+At its core, we have **Customers**, each with their own unique identity, contact information, age, gender, and where they live. We also track how they found our store, like through Facebook or a search engine.
+
+Then there are our **Products**, which are the items we sell. For each product, we know its name, brand, what it costs us, what we sell it for, and what category or department it belongs to (like 'Swim' or 'Jeans'). We also know which **Distribution Center** (warehouse) a product is typically associated with, helping us manage inventory and shipping.
+
+When a customer buys something, it creates an **Order**. Each order is made up of one or more **Order Items**. An order item tracks a specific product that was part of an order, its price, and importantly, its journey through our system: when it was ordered, shipped, delivered, or if it was returned or cancelled. This allows us to see the full lifecycle of each purchase.
+
+In summary, our model connects customers to their purchases, and purchases to the specific products and the warehouses they came from.
+
+### Possible Flaws in this Approach:
+
+While this model provides a good overview, it has some potential limitations:
+
+*   **Missing Order-Level Information:** We track individual items within an order, but we don't have a separate 'Orders' table. This means we can't easily see overall order details like the total order value, shipping address for the entire order (only for individual items, which might be redundant), or the payment method used for the whole order. This makes it harder to analyze overall order trends or customer behavior at a higher level.
+*   **Limited Product Attributes:** While we have basic product details, we might be missing richer attributes that could be useful for analysis or recommendations. For example, clothing size, color, material, or specific technical specifications for electronics are not explicitly captured.
+*   **Inventory Granularity:** The `inventory_item_id` in `order_items` suggests tracking individual physical items, but there isn't a dedicated 'Inventory' table to manage stock levels, locations within a warehouse, or detailed item specifics beyond what's in the `products` table. This could make real-time inventory management challenging.
+*   **Customer Behavior Nuances:** We know how customers found us (`traffic_source`), but we don't track their browsing history, wishlists, or other interactions that don't result in a purchase. This limits our ability to understand customer intent or personalize experiences.
+*   **No Supplier Information:** The model doesn't include any information about the suppliers of the products, which could be important for supply chain management or cost analysis.
+*   **Static Distribution Centers:** The distribution center information is static (name, lat/long). It doesn't account for dynamic inventory allocation, capacity, or real-time availability at these centers.
+*   **Data Quality and Consistency:** As with any real-world data, there could be inconsistencies or missing values (e.g., `delivered_at` or `returned_at` are often empty in the sample). The `sale_price` in `order_items` is present, but it's unclear if it always matches `retail_price` from `products` or if discounts are applied.
+*   **Scalability for Complex Relationships:** For a very large e-commerce platform, managing all order item details directly might become complex. A separate 'Orders' table would typically aggregate common order information.
+
+This initial model provides a solid foundation, but expanding on these areas would offer a more comprehensive and robust understanding of the e-commerce operations.
+
+## Detailed Next Steps for Your Team
+1. Team Mee!ng & Review (Early June 17 - June 19)
+Review Workshop Concepts: As a team, thoroughly discuss the Key Concepts from “Modeling the World Through Data”
+Workshop (June 17).pdf document. Ensure everyone understands the principles of data modeling, the importance of
+cri!quing data, and the dis!nc!on between data and knowledge.
+Review Data Selec!on Guide: Go through the Structured Approach for Evaluating and Selecting Datasets
+(Milestone 2).pdf document together. Understand the criteria for evalua!ng datasets and the proposed data selec!on
+matrix.
+Align on Strategy: Discuss and agree upon the team’s strategy for approaching data collec!on, including roles and
+responsibili!es for evalua!ting the iden!fied datasets.
+2. Dataset Evalua!on & Selec!on (June 19 - June 23)
+Deep Dive into Candidate Datasets: Assign team members to conduct a detailed review of the most promising datasets
+iden!fied in Milestone 1 (Kaggle: Online Course Student Engagement Metrics, SED, GitHub: eLearning Datasets, edX Open
+Learning Dataset). Follow the criteria outlined in the Structured Approach for Evaluating and Selecting Datasets
+(Milestone 2).pdf .
+Fill the Data Selec!on Matrix: Collabora!vely fill out the data selec!on matrix (or a similar comparison tool) to
+systema!cally compare the datasets based on relevance, quality, limita!ons, and prac!cal considera!ons.
+Decision and Jus!fica!on: As a team, decide on the primary dataset(s) you will use. Document our decision and provide a
+clear jus!fica!on for our choice, explaining why it is the best fit for our ac!onable research ques!on and how it aligns with
+the principles of data modeling and cri!que.
+3. Data Acquisi!on & Ini!al Explora!on (June 23 - June 25)
+Acquire Data: Download the selected dataset(s) to your local development environment.
+Load Data: Use appropriate programming tools (e.g., Python with Pandas) to load the data and perform ini!al checks to
+ensure it loads correctly.
+Preliminary Data Explora!on: Conduct a preliminary explora!on of the data. This involves:
+Checking data types and basic sta!s!cs (e.g., df.info() , df.describe() ).
+Iden!fying the number of rows and columns.
+Looking for obvious missing values or inconsistencies.
+Visualizing basic distribu!ons of key variables (e.g., histograms, bar charts) to get a feel for the data.
+This step is about understanding the data’s structure and content, not yet deep analysis.
+4. Data Cleaning & Preprocessing (June 25 - June 28)
+Address Missing Values: Decide on a strategy for handling missing data (e.g., imputa!on, removal of rows/columns).
+Document our decisions.
+Handle Outliers: Iden!fy and address any outliers that might skew our analysis.
+Data Transforma!on: Perform necessary transforma!ons (e.g., conver!ng data types, normalizing/scaling numerical
+features, encoding categorical variables).
+Feature Engineering (Ini!al): Based on our research ques!on, consider if any new features can be created from exis!ng ones
+to be"er represent student interac!on pa"erns or performance.
+Document Cleaning Steps: Keep a detailed record of all cleaning and preprocessing steps in our code (e.g., in a Jupyter
+Notebook or Python script) and in our documenta!on.
+5. Data Documenta!on (Ongoing throughout Milestone 2, Finalized by June 29)
+Data Dic!onary: Create a comprehensive data dic!onary for our chosen dataset. This should describe each variable, its data
+type, its meaning, and any units or categories.
+Data Source & Collec!on Methodology: Document where the data came from, how it was collected (if known), and any
+relevant details about its origin.
+Cleaning Log: Maintain a log of all data cleaning and preprocessing steps, explaining the ra!onale behind each decision.
+Ethical Considera!ons: Reiterate any ethical considera!ons specific to our chosen dataset and how our team plans to
+address them.
+6. Data Hos!ng (June 29 - June 30)
+Repository Integra!on: Ensure our cleaned and documented dataset (or a representa!ve sample if the full dataset is too
+large for GitHub) is properly stored in our GitHub repository. If the dataset is very large, provide clear instruc!ons or a script
+for how it can be accessed or downloaded.
+Version Control: Use Git to track changes to our data and code throughout this process.
+Deliverables for Milestone 2 (Due June 30)
+Decide how to model your problem domain in data: This will be reflected in our chosen dataset and the features you
+select/engineer.
+Decide what data is relevant to our research ques!on: Documented in our data selec!on jus!fica!on.
+Collect, clean, document, and host a data set to study: This is the core deliverable, encompassing the cleaned dataset, its
+documenta!on (data dic!onary, cleaning log), and its presence in our repository.
+Maintain our planning documents: Con!nue upda!ng group norms, learning goals, constraints, and communica!on plan.
+A retrospec!ve for this milestone: Conduct a team retrospec!ve at the end of Milestone 2.
+A labeled Git tag for this milestone: Create a Git tag (e.g., milestone2-submission ) before the deadline.
+Complete the milestone survey: All team members complete the survey.
+
