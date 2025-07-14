@@ -2,7 +2,7 @@
 
 This directory contains files related to the exploratory data analysis (EDA) phase for the `ASOS_GraphReturns` dataset. This README provides a summary of the key findings and visualizations from the interactive exploration.
 
-For a more detailed and interactive analysis, please refer to the `explore_prepared_asos_interactive.ipynb` Jupyter Notebook.
+For a more detailed, interactive, and comprehensively explained analysis, please refer to the `explore_prepared_asos_interactive.ipynb` Jupyter Notebook. This notebook provides in-depth explanations for each visualization and its implications.
 
 ## 1. Initial Data Overview
 
