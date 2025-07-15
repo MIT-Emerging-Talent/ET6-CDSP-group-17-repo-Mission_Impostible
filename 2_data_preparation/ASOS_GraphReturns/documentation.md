@@ -56,11 +56,3 @@ merged.rename(columns={"hash(customerId)": "customer_id", "hash(variantID)": "va
 # Save
 merged.to_csv("asos_merged_training.csv", index=False)
 ```
-
-## 📦 Final Deliverables
-- `01_data_preparation.ipynb`
-- `asos_merged_training.csv`
-- `README.md`
-- `documentation.md`
-
-These files allow full replication of the data preparation process.
