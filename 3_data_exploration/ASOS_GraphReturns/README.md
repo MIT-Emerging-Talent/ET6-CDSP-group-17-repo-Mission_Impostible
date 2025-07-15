@@ -4,60 +4,53 @@ This directory contains files related to the exploratory data analysis (EDA) pha
 
 For a more detailed, interactive, and comprehensively explained analysis, please refer to the `explore_prepared_asos_interactive.ipynb` Jupyter Notebook. This notebook provides in-depth explanations for each visualization and its implications.
 
-## 1. Initial Data Overview
+## Cleaned Feature Set
 
-This section provides a quick look at the dataset's structure, including its shape, columns, data types, and missing values. (Note: Actual table content would be generated dynamically in the notebook).
+After the data preparation phase, the dataset contains the following key features, ready for exploration and analysis:
 
-**Shape:** (Example based on dummy data)
+-   **`isReturned`**: (Target Variable) Binary indicator (0 or 1) if the product was returned.
+-   **`price`**: The price of the product in GBP.
+-   **`shippingCountry`**: The country to which the product was shipped (one-hot encoded during analysis).
+-   **`productType`**: The type of product (e.g., 'Dress', 'Shirt', 'Jeans') (one-hot encoded during analysis).
+-   **`brandDesc`**: Description of the brand (one-hot encoded during analysis).
+-   **`gender`**: Gender of the customer (one-hot encoded during analysis).
+-   **Other numerical features**: Various other numerical attributes derived or present in the dataset.
 
-**Columns:** `isReturned`, `isMale`, `price`, `Country_USA`, `Country_UK`, `productType_Shirt`, `productType_Jeans`
+## Key Patterns and Visualizations
 
-**Missing Values:** None (Example based on dummy data)
+### 1. Overall Product Return Distribution
 
-## 2. Overall Product Return Distribution
-
-This pie chart visualizes the overall proportion of returned vs. non-returned items, providing an immediate understanding of the return rate.
+This pie chart visualizes the overall proportion of returned vs. non-returned items, providing an immediate understanding of the return rate. This distribution is crucial for understanding the class balance of our target variable.
 
 ![Overall Product Return Distribution](images/return_distribution.png)
 
-**Return Percentage:** (Example based on dummy data)
+### 2. Return Rates by Categorical Features
 
-| Status         | Count | Percentage |
-|----------------|-------|------------|
-| Not Returned (0) | 10    | 50.00%     |
-| Returned (1)   | 10    | 50.00%     |
+These bar charts show how return rates vary across different categorical features. These insights help identify which categories are associated with higher or lower return probabilities.
 
-## 3. Return Rates by Categorical Features
-
-### 3.1 Return Rate by Gender
-
-This bar chart shows how return rates vary between different genders.
+#### 2.1 Return Rate by Gender
 
 ![Return Rate by Gender](images/gender_return_rate.png)
 
-### 3.2 Return Rate by Top 10 Shipping Countries
-
-This chart illustrates the return rates across the top 10 shipping countries.
+#### 2.2 Return Rate by Top 10 Shipping Countries
 
 ![Return Rate by Top 10 Shipping Countries](images/country_return_rate.png)
 
-### 3.3 Return Rate by Top 10 Product Types
-
-This chart displays the return rates for the top 10 product types.
+#### 2.3 Return Rate by Top 10 Product Types
 
 ![Return Rate by Top 10 Product Types](images/product_type_return_rate.png)
 
-## 4. Numeric Feature Distributions
+### 3. Numeric Feature Distributions
 
-### 4.1 Distribution of Price for Returned vs. Non-Returned Items
+#### 3.1 Distribution of Price for Returned vs. Non-Returned Items
 
-This histogram shows the distribution of prices, differentiating between returned and non-returned items.
+This histogram shows the distribution of prices, differentiating between returned and non-returned items. This helps in understanding if certain price ranges are more prone to returns.
 
 ![Distribution of Price for Returned vs. Non-Returned Items](images/price_distribution.png)
 
-## 5. Correlation Analysis
+### 4. Correlation Analysis
 
-This heatmap visualizes the linear relationships between all numerical features, highlighting their correlation with the `isReturned` target variable.
+This heatmap visualizes the linear relationships between all numerical features, highlighting their correlation with the `isReturned` target variable. This helps in identifying features that have a strong linear relationship with returns.
 
 ![Correlation Matrix of Numerical Features](images/correlation_matrix.png)
 
