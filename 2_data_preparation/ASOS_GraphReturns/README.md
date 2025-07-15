@@ -1,4 +1,4 @@
-# 📄 README.md – Data Preparation Phase
+# Data Preparation
 
 ## 🗂 Project Overview
 This repository contains the **data preparation step** of a multi-phase analysis project on e-commerce product returns using the **ASOS GraphReturns Dataset**. In this notebook, we focus on:
