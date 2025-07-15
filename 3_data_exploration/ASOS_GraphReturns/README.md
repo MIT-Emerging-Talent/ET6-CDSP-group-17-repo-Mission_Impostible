@@ -8,7 +8,7 @@ For a more detailed, interactive, and comprehensively explained analysis, please
 
 This section provides a quick look at the dataset's structure, including its shape, columns, data types, and missing values. (Note: Actual table content would be generated dynamically in the notebook).
 
-**Shape:** (20, 7) (Example based on dummy data)
+**Shape:** (Example based on dummy data)
 
 **Columns:** `isReturned`, `isMale`, `price`, `Country_USA`, `Country_UK`, `productType_Shirt`, `productType_Jeans`
 
