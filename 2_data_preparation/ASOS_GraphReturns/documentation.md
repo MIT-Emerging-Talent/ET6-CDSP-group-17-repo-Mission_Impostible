@@ -1,61 +1,66 @@
+# 📄 documentation.md – Data Preparation Phase
 
-# ASOS Training Data Analysis: Understanding Customer Returns
+## 🧠 Non-Technical Summary
+In this step, we combined three different datasets into one cohesive table to make our data easier to work with in subsequent analysis stages. These datasets include records of customer events, customer details, and product features. Merging them lets us answer questions like:
 
-## Introduction
+- Which customers are returning items?
+- Which products are more likely to be returned?
 
-This document explains what we found by looking at information about customer purchases and returns from ASOS. We used a dataset that combines details about products, customers, and their transactions (specifically, whether they returned an item). The goal was to understand what factors might be related to whether a customer returns a product.
+### 🎯 What We’re Sure About
+- The merging process worked without errors
+- We confirmed that hashed keys were successfully used to join the datasets
+- The output file was generated and saved correctly
 
-## Key Findings
+### ⚠️ What Might Introduce Error
+- If any `.p` file has mismatched keys, some data rows may be lost in the merge
+- The dataset only includes training data, not full customer histories
 
-After looking at the data, we observed a few interesting patterns:
+## ⚙️ Technical Description
+### Step 1: Upload Raw Pickled Files
+We use Google Colab’s `files.upload()` method to import the training `.p` files manually. These are serialized with Python's pickle module and need to be loaded using `pd.read_pickle()`.
 
-*   **Customer Return Rates Vary:** Not all customers return items at the same rate. Some customers return most of the items they buy, while others return very few. We calculated a 'customer return rate' for each customer to see this difference.
+### Step 2: Merge DataFrames
+We used Pandas `merge()` to join:
+- `event_table` with `customer_nodes` on `hash(customerId)`
+- The resulting DataFrame with `product_nodes` on `hash(variantID)`
 
-*   **Product Types Might Influence Returns:** There seems to be a relationship between the type of product purchased and the likelihood of it being returned. Some product types appear to have higher return rates than others. This could be due to various reasons like sizing issues, product quality, or customer expectations for those specific types of products.
+### Step 3: Clean Column Names
+Renaming `hash(customerId)` ➝ `customer_id` and `hash(variantID)` ➝ `variant_id` improves readability for downstream work.
 
-*   **Geographic Differences in Returns:** The country where a customer lives might also play a role in return behavior. We saw some variations in return rates across different shipping countries. This could be influenced by local return policies, shipping costs, or cultural shopping habits.
+### Step 4: Export Clean Data
+The merged DataFrame is saved as `asos_merged_training.csv` using `Path().resolve()` to confirm the full save path.
 
-*   **Customer Demographics and Returns:** We also looked at customer information like year of birth and gender. While we didn't find very strong patterns for these factors alone, they might contribute to return behavior when combined with other information.
+## 🔁 Possible Alternative Approaches
+- Use hashing validation to ensure key integrity before merging
+- Add logs or counters to catch dropped rows
+- Integrate error handling with try/except blocks around `read_pickle`
 
-## Level of Certainty
+## 💾 Script Summary
+```python
+import pandas as pd
+from pathlib import Path
 
-Our findings are based on the patterns we observed in the provided training data.
+# Load files
+with open("event_table_training.p", "rb") as f:
+    event = pd.read_pickle(f)
+with open("customer_nodes_training.p", "rb") as f:
+    cust = pd.read_pickle(f)
+with open("product_nodes_training.p", "rb") as f:
+    prod = pd.read_pickle(f)
 
-*   **High Certainty:** The observation that customer return rates vary is highly certain, as it's a direct calculation from the data provided for each customer. Similarly, the existence of different return rates across product types and shipping countries is visible in the data, giving us a good level of confidence in these findings within this dataset.
+# Merge and rename
+merged = event.merge(cust, on="hash(customerId)")\
+               .merge(prod, on="hash(variantID)")
+merged.rename(columns={"hash(customerId)": "customer_id", "hash(variantID)": "variant_id"}, inplace=True)
 
-*   **Moderate Certainty:** While we see relationships between product types, shipping countries, and returns, the reasons *why* these relationships exist are not directly available in the data. Our conclusions about potential causes (like sizing or policies) are inferences and have a moderate level of certainty.
+# Save
+merged.to_csv("asos_merged_training.csv", index=False)
+```
 
-*   **Lower Certainty:** The influence of demographic factors like age and gender on returns was less clear in this analysis. While there might be subtle effects, they were not as prominent as the variations seen across customers, product types, and countries in this specific dataset.
+## 📦 Final Deliverables
+- `01_data_preparation.ipynb`
+- `asos_merged_training.csv`
+- `README.md`
+- `documentation.md`
 
-It's important to remember that these findings are based on a specific set of training data and might not perfectly reflect all ASOS customer behavior at all times.
-
-## Potential Sources of Error
-
-Several factors could influence the accuracy and generalizability of these findings:
-
-*   **Data Completeness:** The dataset includes specific information, but other factors not present (like the reason for return, product price, or promotional offers) could also significantly impact return behavior.
-*   **Data Accuracy:** There's always a possibility of errors in data recording, such as incorrect product types or customer information.
-*   **Sample Bias:** The training data is a snapshot and might not be perfectly representative of all ASOS customers or all types of transactions.
-*   **Analysis Limitations:** Our analysis focused on identifying correlations in the data. Correlation does not necessarily mean causation. We can see that certain factors are associated with higher or lower returns, but we cannot definitively say they *cause* the returns based solely on this data.
-
-## Visualizations
-
-(Note: Specific visualizations were not generated in this step, but typically, an analysis like this would include plots to help understand the findings. Examples of helpful visualizations would be:)
-
-*   **Histograms of Customer Return Rates:** To show the distribution of return rates across all customers.
-*   **Bar Charts of Return Rates by Product Type:** To compare the average return rates for different categories of products.
-*   **Maps or Bar Charts of Return Rates by Shipping Country:** To visualize geographical differences in return behavior.
-
-These visualizations would make the patterns discussed above much easier to see and understand.
-
-## Conclusion and Next Steps
-
-Our analysis of the ASOS training data reveals that customer return behavior is influenced by a combination of factors, including individual customer habits, the type of product purchased, and the customer's location.
-
-From a business perspective, these findings suggest several potential areas for action:
-
-*   **Investigate High-Return Product Types:** Dig deeper into why certain product types have high return rates. This could involve looking at product descriptions, sizing information, customer reviews, or manufacturing quality.
-*   **Understand Geographic Differences:** Explore the reasons behind varying return rates in different countries. This might involve reviewing local return policies, shipping logistics, and marketing strategies.
-*   **Personalize Customer Experiences:** Recognize that customers have different return behaviors and potentially tailor recommendations or communications based on their past return history.
-
-Further analysis with more detailed data, including reasons for return and product specifics, would provide even deeper insights into how to potentially reduce return rates and improve customer satisfaction.
+These files allow full replication of the data preparation process.
