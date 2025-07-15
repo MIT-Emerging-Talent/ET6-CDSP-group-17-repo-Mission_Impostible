@@ -96,8 +96,3 @@ pip install pandas matplotlib seaborn scikit-learn
 
 ---
 
-## 👨‍🔬 Suggested Improvements
-
-- Try **XGBoost** or **LightGBM** for better accuracy.
-- Add **graph-based learning** (e.g., GNNs) for network-level insights.
-- Use return timestamps and reasons if made available.
