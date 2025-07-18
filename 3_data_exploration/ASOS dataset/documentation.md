@@ -4,7 +4,7 @@
 ## 📁 Dataset
 
 **Source**: https://osf.io/c793h/  
-**File Used**: `asos_merged_training.csv`  
+**File Used**: [`asos_merged_training.csv`](https://drive.google.com/file/d/1IOFay-uuo2p5kYX8TZpumvsMQ8uwzt67/view?usp=sharing)  
 **Target Column**: `isReturned` (0 = not returned, 1 = returned)
 
 ## 📌 Main Questions Addressed
@@ -54,9 +54,3 @@
 - Pandas
 - Seaborn & Matplotlib
 
-## 💡 Suggested Next Steps
-
-- Apply classification models using selected features
-- Address class imbalance using resampling techniques
-- Perform feature engineering on date-based columns
-- Explore social/seasonal effects on return behavior
