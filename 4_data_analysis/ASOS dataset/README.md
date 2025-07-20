@@ -84,7 +84,7 @@ Our analysis showed slight differences in return rates across different age grou
 
 We observed a small difference in return rates between genders, with female customers (represented by 0) having a slightly higher average return rate than male customers (represented by 1).
 
-![Average Return Rate by Age Group](Visualizations/return_rate_by_age.png)
+![Average Return Rate by Age Group](Visualizations/return_rate_by_gender.png)
 
 ---
 
