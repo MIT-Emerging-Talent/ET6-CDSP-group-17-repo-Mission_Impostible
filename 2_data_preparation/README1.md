@@ -117,33 +117,15 @@ Located under `1_datasets/thelook_Ecommerce/`:
 ## 📁 Folder Structure
 
 ```
-project_root/
-│
-├── 1_datasets/
-│   └── thelook_Ecommerce/
-│       ├── distribution_centers.csv
-│       ├── order_items.csv
-│       ├── products.csv
-│       └── users.csv
-│
 ├── 2_data_preparation/
 │   ├── asos_graphreturns/
-│   │   └── 01_data_preparation.ipynb
+│   │   └── ASOS_DATA_Preparation.ipynb
 │   └── thelook_Ecommerce/
-│       ├── TheLook_Data_Preparation.ipynb
+│       ├── theLookdata_preparation.ipynb
 │       └── thelook_returns_features.csv
 │
 └── README.md  ← (You are here)
 ```
 
----
-
-## 📬 Contact
-
-For questions or collaboration, feel free to open an issue or submit a pull request.
-
----
-
 ## 📜 License
-
-This project is for educational and research purposes. Refer to individual dataset licenses and terms of use before commercial application.
+[MIT License](LICENSE)
