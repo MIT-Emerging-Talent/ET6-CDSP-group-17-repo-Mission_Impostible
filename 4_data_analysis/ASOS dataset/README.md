@@ -104,11 +104,11 @@ Customer past behavior is a strong indicator:
 - Customers who buy more items overall tend to return fewer of them.
 - Product price and discounts also slightly affect return likelihood.
 
-![Distribution of salesPerCustomer by Return Status](Visualizations/salesPerCustomer_distribution.png)
-![Distribution of returnsPerCustomer by Return Status](Visualizations/returnsPerCustomer_distribution.png)
-![Distribution of avgGbpPrice by Return Status](Visualizations/avgGbpPrice_distribution.png)
-![Distribution of avgDiscountValue by Return Status](Visualizations/avgDiscountValue_distribution.png)
-![Distribution of salesPerProduct by Return Status](Visualizations/salesPerProduct_distribution.png)
+![Distribution of salesPerCustomer by Return Status](Visualizations/salesPerCustomer_by_return_status.png)
+![Distribution of returnsPerCustomer by Return Status](Visualizations/returnsPerCustomer_by_return_status.png)
+![Distribution of avgGbpPrice by Return Status](Visualizations/avgGbpPrice_by_return_status.png)
+![Distribution of avgDiscountValue by Return Status](Visualizations/avgDiscountValue_by_return_status.png)
+![Distribution of salesPerProduct by Return Status](Visualizations/salesPerProduct_by_return_status.png)
 
 ---
 
