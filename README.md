@@ -80,7 +80,6 @@ UX improvements).
 ## 👨‍👩‍👧‍👦 Team of Imposters
 
 - [Shadi Shahab]
-- [Rafaa Ali]
 - [Pyae Linn]
 - [Frankline Alele Ambetsa]
 - [Derek Karungani]

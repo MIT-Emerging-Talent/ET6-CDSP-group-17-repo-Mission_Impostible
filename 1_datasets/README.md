@@ -49,5 +49,3 @@ B. TheLook E-Commerce Dataset
 | Graph      | Detecting complex patterns   | Needs dense data, harder to explain |
 
 Both methods give useful insights into product returns. Use them alone or together for better results.
-
-Questions or ideas? Open an issue or fork the repo!
