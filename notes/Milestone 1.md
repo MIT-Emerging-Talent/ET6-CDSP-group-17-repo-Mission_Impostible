@@ -1,49 +1,47 @@
-# Meeting Notes: Data Science Group – Milestone 1
+# 📝 Meeting Notes: Data Science Group – Milestone 1
 
-## Meeting Details
+## 📅 Meeting Details: June 13, 2025
 
-**Date:** June 9, 2025  
-**Time:** 9:00 AM – 10:00 AM EST  
-**Location:** Virtual (Google Meet)  
-**Attendees:** Rafaa, Shadi, Linn, Idris, Derek  
-**Note Taker:** Shadi  
-**Objective:** Finalize the research question domain and assign tasks to complete Milestone 1
-
----
-
-## Agenda
-
-- Review of Milestone 1 Progress  
-- Task Division for Milestone 1 Files  
-- Finalize Research Question Domain  
-- Wrap-up and Next Steps  
+**Date**: June 13, 2025  
+**Time**: 9:00 AM – 10:00 AM EST  
+**Location**: Virtual (Google Meet)  
+**Attendees**: Rafaa, Shadi, Linn, Idris, Derek  
+**Note Taker**: Shadi  
+**Objective**: Refine the research question and assign tasks to advance Milestone 1
 
 ---
 
-## Notes
+### 📌 Agenda
 
-- The meeting opened with a warm welcome, acknowledging the absence of one team member but maintaining momentum to advance Milestone 1.
-
-- Progress on Milestone 1 was reviewed, noting that additional work is required to finalize deliverables. Tasks were divided to streamline completion: communication, constraints, and learning goals were assigned, with all parts to be integrated into shared files.
-
-- The contributor guidelines were identified as needing completion, alongside the creation of a labeled Git tag to mark the milestone.
-
-- **Deadlines established:**
-  - Initial work on communication, constraints, and learning goals to be completed by **June 10, 2025, 11 AM EST**.
-  - Entire Milestone 1 due by **June 12, 2025, 11 AM EST**.
-
-- The three domains (Fintech, Healthcare, E-commerce) were discussed. The team unanimously chose to focus on **E-commerce**, specifically targeting **Returns Prediction and Reduction**. This topic was selected due to its relevance to retail industry challenges and its potential to enhance future job opportunities.
-
-- The meeting concluded with a plan to integrate individual contributions into shared files, finalize the research question, and meet the Milestone 1 deadline. Coordination will continue via **Slack** and the shared **Google Document**.
+1. Review of Uploaded Problems  
+2. Resource Sharing for Business Problem  
+3. Research Question Refinement  
+4. Individual Retrospectives and Team Updates  
+5. Wrap-up and Next Steps
 
 ---
 
-## Action Items
+### 🗒️ Key Discussion Notes
 
-- [ ] Complete communication section by **June 10, 2025, 11 AM EST**  
-- [ ] Complete constraints section by **June 10, 2025, 11 AM EST**  
-- [ ] Complete learning goals section by **June 10, 2025, 11 AM EST**  
-- [ ] Integrate all parts into shared Milestone 1 files by **June 12, 2025, 11 AM EST**  
-- [ ] Complete contributor guidelines by **June 12, 2025, 11 AM EST**  
-- [ ] Create labeled Git tag for Milestone 1 by **June 12, 2025, 11 AM EST**  
-- [ ] Share problem ideas and updates in the [Google Document](https://docs.google.com/document/d/13iPKyEAhX499iiJYInLbcRKySS1p4R_upxixYhqclZs/edit?usp=sharing)
+- The meeting began with a review of problems uploaded to the shared Google Document, focusing on the **E-commerce Returns Prediction and Reduction** business problem.
+- A strategy was proposed for sharing educational resources:
+  - Each member will self-learn relevant material.
+  - Share a **maximum of two to three key resources** to avoid overload.
+- The research question, rooted in the E-commerce domain, was prioritized for refinement to ensure clarity and project alignment.
+- **Individual retrospectives** for Milestone 1 were assigned for completion before the next meeting.
+- One member announced their departure to join a group more aligned with their academic focus. Farewells were expressed appreciatively.
+- The meeting concluded with renewed commitment to:
+  - Share key resources
+  - Draft retrospectives
+  - Refine the research question collaboratively via Slack and Google Docs
+
+---
+
+### ✅ Action Items
+
+- [ ] Share 2–3 resources on the E-commerce business problem – **June 16, 2025**
+- [ ] Write individual Milestone 1 retrospectives – **June 16, 2025**
+- [ ] Consolidate retrospectives during Monday meeting – **June 16, 2025**
+- [ ] Refine the research question – **June 16, 2025**
+- [ ] Share ideas/updates via [Google Doc](https://docs.google.com/document/d/13iPKyEAhX499iiJYInLbcRKySS1p4R_upxixYhqclZs/edit?usp=sharing)
+- [ ] Update team roster to reflect group departure – **June 16, 2025**
