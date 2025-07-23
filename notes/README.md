@@ -12,6 +12,7 @@ Welcome to our collection of meeting notes! This space is dedicated to keeping o
 | 🎯 **Milestone 0** | [Read the Notes](./Milestone%200.md) |
 | 🎯 **Milestone 1** | [Read the Notes](./Milestone%201.md) |
 | 🎯 **Milestone 2** | [Read the Notes](./Milestone%202.md) |
+| 🎯 **Milestone 3** | [Read the Notes](./Milestone%203.md) |
 
 ---
 
