@@ -5,7 +5,7 @@
 **Date**: July 20, 2025  
 **Time**: 9:00 AM – 10:00 AM EST  
 **Location**: Virtual (Google Meet)  
-**Attendees**: Rafaa, Shadi, Linn, Idris, Derek  
+**Attendees**: Shadi, Linn, Derek  
 **Note Taker**: Shadi  
 **Objective**: Review completed work and outline remaining tasks for Milestone 2
 
