@@ -1,8 +1,0 @@
-# Git Tag: milestone-1
-
-Milestone 1 – Basic data ingestion or partial cleaning implemented.
-
-```bash
-git tag -a milestone-1 -m "Milestone 1: Basic data pipeline implemented"
-git push origin milestone-1
-```
