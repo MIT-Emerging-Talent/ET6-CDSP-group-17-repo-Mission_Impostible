@@ -116,7 +116,6 @@ pip install pandas numpy matplotlib seaborn scikit-learn xgboost shap
 
 - Stratified train-test split used for fair evaluation.
 - Class imbalance handled via model weighting.
-- SHAP used for transparency.
 - Cross-validation for all reported metrics.
 
 ---
