@@ -159,5 +159,4 @@ The analysis requires the following Python packages:
 
 - The analysis uses stratified sampling to maintain class balance
 - All models are evaluated using cross-validation for robustness
-- SHAP analysis provides interpretable explanations for business users
 - The workflow is designed to be reproducible and extensible 
