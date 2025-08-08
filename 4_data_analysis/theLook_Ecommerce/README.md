@@ -86,21 +86,39 @@ Based on XGBoost feature importance analysis:
 
 The analysis produces comprehensive visualizations:
 - **Class balance distribution**
+
+<img src="imgs/class.png" alt="Return Rate Donut Chart" width="400"/>
+
 - **Feature distributions by return status**
-- **Correlation heatmaps**
+
+<img src="imgs/num.png" alt="Return Rate Donut Chart" width="400"/>
+
+- **Correlation heatmap**
+
+<img src="imgs/heat.png" alt="Return Rate Donut Chart" width="400"/>
+
+
 - **Missing value patterns**
+
+<img src="imgs/miss.png" alt="Return Rate Donut Chart" width="400"/>
+
 - **ROC and Precision-Recall curves**
+
+<img src="imgs/ROC.png" alt="Return Rate Donut Chart" width="400"/>
+
+<img src="imgs/recall.png" alt="Return Rate Donut Chart" width="400"/>
+
 - **Confusion matrices (absolute and normalized)**
+
+<img src="imgs/lg.png" alt="Return Rate Donut Chart" width="400"/>
+
+<img src="imgs/xg.png" alt="Return Rate Donut Chart" width="400"/>
+
 - **Learning curves**
-- **SHAP summary and dependence plots**
 
-## 💼 Business Impact & Recommendations
+<img src="imgs/lcl.png" alt="Return Rate Donut Chart" width="400"/>
 
-### Potential Benefits
-- **Cost savings** through proactive return management
-- **Improved inventory planning** based on return predictions
-- **Enhanced customer targeting** strategies
-- **Operational efficiency** gains
+<img src="imgs/lcx.png" alt="Return Rate Donut Chart" width="400"/>
 
 ### Risk Considerations
 - **False positives:** Risk of incorrectly flagging non-returning customers
