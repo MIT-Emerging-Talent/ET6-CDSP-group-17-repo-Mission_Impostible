@@ -18,8 +18,7 @@ The analysis follows a structured 12-step workflow:
 8. **Exploratory Data Analysis (EDA)** - Deep dive into data patterns
 9. **Model Diagnostics** - Error analysis and performance breakdown
 10. **Model Robustness** - Cross-validation and learning curves
-11. **Advanced Interpretability** - SHAP analysis for model explanations
-12. **Model Improvement** - for the future
+11. **Model Improvement** - for the future
 
 ## 🎯 Key Findings
 

@@ -73,8 +73,7 @@ Predict whether a product will be returned based on customer behavior, product c
 8. Exploratory Data Analysis
 9. Error diagnostics by category & geography
 10. Robustness checks (cross-validation)
-11. SHAP-based interpretability
-12. Model improvement suggestions
+11. Model improvement suggestions
 
 ### 🎯 Model Results
 | Model              | ROC-AUC (CV) | F1-score |
@@ -96,7 +95,6 @@ Predict whether a product will be returned based on customer behavior, product c
 ### 📊 Visuals Generated
 - ROC, PR curves
 - Feature distributions (by return status)
-- SHAP summary/dependence plots
 - Confusion matrices & learning curves
 
 ### 💼 Recommendations
