@@ -47,13 +47,13 @@ Predicting returns is crucial for e-commerce logistics and customer experience. 
 ## 2. 📁 Dataset Documentation
 
 ### A. ASOS GraphReturns Dataset
-- **Source:** [OSF](https://osf.io/)
+- **Source:** [OSF](https://osf.io/c793h/)
 - **Data:** Edge list with return labels, anonymized features
 - **Notes:** No timestamps, only customers with returns
 - **How to get:** Download from OSF
 
 ### B. TheLook E-Commerce Dataset
-- **Source:** [Kaggle](https://www.kaggle.com/datasets/thelookecommerce/thelook-ecommerce-dataset)
+- **Source:** [Kaggle](https://www.kaggle.com/code/aniqohhanahaura/thelook-dataset)
 - **Files:** `order_items.csv`, `products.csv`, `users.csv`, `distribution_centers.csv`
 - **Notes:** Some missing timestamps, synthetic PII
 - **How to get:** Download from Kaggle
