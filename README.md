@@ -2,78 +2,158 @@
 
 ## ✨ Who We Are
 
-Welcome to **Mission Impostible**, a team of emerging data scientists from around
-the globe who are boldly navigating the world of analytics — while quietly battling
-an all-too-familiar foe: **Imposter Syndrome**.
+Welcome to **Mission Impostible**, a team of emerging data scientists from around the globe who are boldly navigating the world of analytics — while quietly battling an all-too-familiar foe: **Imposter Syndrome**.
 
-The name? A cheeky nod to how we feel sometimes. But while we may be new to the
-game, we’re not backing down. We’re collaborating, learning, and growing together—
-one dataset at a time — and we’re on a mission to tackle
-real-world problems with data.
+The name? A cheeky nod to how we feel sometimes. But while we may be new to the game, we’re not backing down. We’re collaborating, learning, and growing together—one dataset at a time—and we’re on a mission to tackle real-world problems with data.
 
 ---
 
-## 🛒 Domain: E-commerce
+## 🛒 Problem Background: Returns in E-commerce
 
-As a diverse team from different regions and backgrounds, we wanted to work on
-something **globally relevant**, **business-oriented**, and **personally relatable**
-That’s why we’ve chosen the **e-commerce** sector — a rapidly growing field that
-affects nearly every consumer and retailer worldwide.
+Product returns are a major challenge for online retailers, costing companies **billions** annually—not just in lost sales, but also in **reverse logistics**, **inventory disruption**, **fraud**, and **environmental waste**. Managing returns impacts profitability and customer satisfaction, requiring robust data-driven solutions.
 
 ---
 
-## 🎯 Problem Background: Returns in E-commerce
+# 📦 Returns Prediction: Graph-Based vs Tabular E-Commerce Modeling
 
-Product returns are one of the biggest headaches for online retailers today. From
-buyer’s remorse to unclear product information, returns are costing companies
-**billions** every year — not just in lost sales, but also in the **reverse
-logistics**,
-**inventory disruption**, **fraud**, and **environmental waste** they create.
+This project compares two advanced approaches to predicting product returns in e-commerce:
 
-Retailers must handle the entire reverse supply chain — inspecting returned items,
-restocking (if possible), dealing with damaged goods, and absorbing associated
-costs. This creates major inefficiencies and affects both profitability and customer
-satisfaction.
+- **Graph-based modeling** (ASOS Returns Prediction)
+- **Tabular data modeling** (TheLook E-Commerce)
 
-We believe that by applying data science, we can help uncover insights into what
-drives returns and how to mitigate them.
-
-To support this effort, the team has compiled a [structured domain study](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-17-repo-Mission_Impostible/blob/main/0_domain_study/README.md),
-which organizes background research,industry reports,
-and initial observations to better understand the landscape of the problem.
+Our goal: **Understand and predict product returns using customer, product, and transaction features—empowering smarter business decisions.**
 
 ---
 
-## 🧪 Research Question (Work in Progress)
+## 1. 🧠 Modeling Approaches: Why Two Methods?
 
-> **"What customer or product-level features best predict the likelihood of return,
-and how can better product information and website design help reduce them?"**
+Predicting returns is crucial for e-commerce logistics and customer experience. We explored:
 
-As we begin our exploration, we understand that this question will likely evolve
-based on data availability and insights. Depending on the focus of the data,
-we may narrow our scope to:
+### 📦 A. Tabular Modeling (TheLook Dataset)
+- **Each row = one purchase** (features: product, customer, price, shipping, etc.)
+- **Models:** Logistic Regression, XGBoost
+- **Strengths:** Simple, interpretable, fits business rules
+- **Limitations:** Treats transactions independently
 
-- Specific product categories (e.g. fashion, electronics), or
-- User experience factors (e.g. product descriptions, reviews, sizing charts, images).
-
----
-
-## 📚 Project Objectives
-
-- Identify key predictors of product returns.
-- Build a model or framework to estimate return probability.
-- Suggest practical strategies to reduce return rates (e.g. better product data,
-UX improvements).
-- Communicate findings effectively through visualizations and storytelling.
+### 🧩 B. Graph Modeling (ASOS Dataset)
+- **Nodes:** Customers & products
+- **Edges:** Purchases (labeled as returned/not)
+- **Model:** Graph Neural Networks (GNNs)
+- **Strengths:** Captures shared patterns, e.g., return-prone users or products
+- **Limitations:** No time data, only includes customers with returns
 
 ---
 
-## 🧰 Tools & Technologies *(To be updated)*
+## 2. 📁 Dataset Documentation
 
-- Python / Jupyter
-- Pandas, NumPy, Matplotlib, Seaborn
-- Scikit-learn
-- Git & GitHub
+### A. ASOS GraphReturns Dataset
+- **Source:** [OSF](https://osf.io/)
+- **Data:** Edge list with return labels, anonymized features
+- **Notes:** No timestamps, only customers with returns
+- **How to get:** Download from OSF
+
+### B. TheLook E-Commerce Dataset
+- **Source:** [Kaggle](https://www.kaggle.com/datasets/thelookecommerce/thelook-ecommerce-dataset)
+- **Files:** `order_items.csv`, `products.csv`, `users.csv`, `distribution_centers.csv`
+- **Notes:** Some missing timestamps, synthetic PII
+- **How to get:** Download from Kaggle
+
+---
+
+## 📊 Summary Table
+
+| Model Type | Good For                  | Not Good For           |
+|------------|---------------------------|------------------------|
+| Tabular    | Easy to use & interpret   | Finding relationships  |
+| Graph      | Complex pattern detection | Needs dense data, harder to explain |
+
+Both methods provide valuable insights—use them together for best results.
+
+---
+
+# 🛍️ E-commerce Product Return Analysis – Data Preparation
+
+We engineered modeling-ready datasets for both approaches:
+
+## 📦 ASOS GraphReturns – Data Preparation
+
+- **Input:** `.p` files (event, customer, product nodes)
+- **Process:** Merge, clean, rename columns
+- **Output:** `asos_merged_training.csv`
+- **How to run:** Use `01_data_preparation.ipynb` in Google Colab
+
+## 📦 TheLook E-commerce – Data Preparation
+
+- **Input:** Four CSVs (orders, products, users, centers)
+- **Process:** Clean, engineer features (return flag, discount %, basket size, tenure, shipping latency)
+- **Output:** `thelook_returns_features.csv`
+- **How to run:** Use `theLookdata_preparation.ipynb` in Jupyter/VS Code
+
+---
+
+## 📁 Folder Structure
+
+```
+├── 01_data_preparation.ipynb
+├── 02_exploratory_data_analysis.ipynb
+├── 03_feature_engineering.ipynb
+├── 04_modeling.ipynb
+├── data
+│   ├── asos_merged_training.csv
+│   ├── thelook_returns_features.csv
+│   ├── order_items.csv
+│   ├── products.csv
+│   ├── users.csv
+│   └── distribution_centers.csv
+├── reports
+│   ├── figures
+│   └── tables
+└── README.md
+```
+
+---
+
+# 📈 Data Exploration & Insights
+
+## ASOS GraphReturns
+
+- **Return rates:** Most purchases are not returned; most customers return only once or twice.
+- **Key drivers:** Product type, gender, country, age.
+- **Imbalance:** Most records are "not returned".
+- **Visuals:** Return frequencies, rates by demographic, product, geography.
+
+## TheLook E-commerce
+
+- **Return share:** ~10% of items returned.
+- **Key drivers:** Season, product category, country, distribution center.
+- **Numeric features:** Weak linear correlation with returns—non-linear models needed.
+- **Visuals:** Feature distributions, return rates by group.
+
+---
+
+# 🤖 Predictive Modeling & Results
+
+## ASOS (Graph-Based)
+
+- **Models:** Logistic Regression, Random Forest, GNNs
+- **Top features:** Customer/product return history, product type, country
+- **Accuracy:** ~75% (Random Forest)
+- **Limitations:** No return reasons, only historical patterns
+
+## TheLook (Tabular)
+
+- **Models:** Logistic Regression (baseline), XGBoost (advanced)
+- **Best ROC-AUC:** 0.655 (XGBoost)
+- **Top features:** Product category, discount %, basket size, tenure
+- **Insights:** High error in certain categories/geographies; numeric features alone not enough
+
+---
+
+# 💡 Key Takeaways
+
+- **Graph and tabular models each reveal unique patterns.**
+- **Product category, customer history, and geography are strong predictors.**
+- **Combining both approaches can improve return prediction and business strategy.**
 
 ---
 
@@ -81,23 +161,14 @@ UX improvements).
 
 - [Shadi Shahab]
 - [Pyae Linn]
-- [Frankline Alele Ambetsa]
 - [Derek Karungani]
-- [Idris Jon.]
 
 ---
 
-## 📅 Project Status
+## 📜 License
 
-🟡 **Current Phase:** Problem Framing & Data Exploration  
-(Research question under refinement)
-
----
-
-## 📌 Notes
-
-This project is part of an educational collaboration and aims to develop both
-technical and teamwork skills. We’re learning, iterating, and working together
-to build something meaningful.
+[MIT License](LICENSE)
 
 ---
+
+© 2025 | Mission Impostible – E-commerce Product Return Prediction Project
