@@ -84,7 +84,7 @@ if selected_dataset == "🏠 Overview":
     
     with col1:
         st.markdown("""
-        <div class="metric-card">
+        <div class="metric-card" style="color:black;">
             <h3>🧠 What We're Solving</h3>
             <p>Product returns cost e-commerce businesses billions annually. By predicting which items are likely to be returned, companies can:</p>
             <ul>
@@ -98,7 +98,7 @@ if selected_dataset == "🏠 Overview":
     
     with col2:
         st.markdown("""
-        <div class="metric-card">
+        <div class="metric-card" style="color:black;">
             <h3>🔬 Our Approach</h3>
             <p>We tested two different methods to predict returns:</p>
             <ul>
@@ -144,7 +144,7 @@ elif selected_dataset == "📦 ASOS Dataset":
     
     with col1:
         st.markdown("""
-        <div class="insight-box">
+        <div class="insight-box" style="color:black;">
             <h4>👥 Customer Behavior</h4>
             <ul>
                 <li>Most customers return products only once or twice</li>
@@ -156,7 +156,7 @@ elif selected_dataset == "📦 ASOS Dataset":
     
     with col2:
         st.markdown("""
-        <div class="insight-box">
+        <div class="insight-box" style="color:black;">
             <h4>🛍️ Product Patterns</h4>
             <ul>
                 <li>Certain product types have consistently higher return rates</li>
@@ -245,7 +245,7 @@ elif selected_dataset == "🛒 TheLook Dataset":
     
     with col1:
         st.markdown("""
-        <div class="insight-box">
+        <div class="insight-box" style="color:black;">
             <h4>🎯 What Affects Returns</h4>
             <ul>
                 <li><strong>Product Category:</strong> Clothing sets have highest return rates (11.9%)</li>
@@ -258,7 +258,7 @@ elif selected_dataset == "🛒 TheLook Dataset":
     
     with col2:
         st.markdown("""
-        <div class="insight-box">
+        <div class="insight-box" style="color:black;">
             <h4>🤔 Surprising Findings</h4>
             <ul>
                 <li><strong>Gender:</strong> Almost no difference between male/female returns</li>
@@ -309,7 +309,7 @@ elif selected_dataset == "🛒 TheLook Dataset":
     
     with col1:
         st.markdown("""
-        <div class="metric-card">
+        <div class="metric-card" style="color:black;">
             <h4>📈 Logistic Regression</h4>
             <ul>
                 <li><strong>Accuracy:</strong> Baseline performance</li>
@@ -321,7 +321,7 @@ elif selected_dataset == "🛒 TheLook Dataset":
     
     with col2:
         st.markdown("""
-        <div class="metric-card">
+        <div class="metric-card" style="color:black;">
             <h4>🚀 XGBoost</h4>
             <ul>
                 <li><strong>ROC-AUC:</strong> 0.655 (65.5% accuracy)</li>
@@ -374,7 +374,7 @@ elif selected_dataset == "📈 Comparison":
     
     with col1:
         st.markdown("""
-        <div class="insight-box">
+        <div class="insight-box" style="color:black;">
             <h4>📦 Use ASOS Method When:</h4>
             <ul>
                 <li>You have rich customer-product interaction data</li>
@@ -388,7 +388,7 @@ elif selected_dataset == "📈 Comparison":
     
     with col2:
         st.markdown("""
-        <div class="insight-box">
+        <div class="insight-box" style="color:black;">
             <h4>🛒 Use TheLook Method When:</h4>
             <ul>
                 <li>You need quick, interpretable results</li>
@@ -404,7 +404,7 @@ elif selected_dataset == "📈 Comparison":
     st.markdown("### 💼 Business Recommendations")
     
     st.markdown("""
-    <div class="dataset-card">
+    <div class="dataset-card" style="color:black;">
         <h3>🚀 Best Practice Approach</h3>
         <p><strong>Start with TheLook method</strong> for immediate insights and operational improvements. 
         <strong>Evolve to ASOS method</strong> as you collect more data and build technical capabilities.</p>
@@ -426,7 +426,7 @@ elif selected_dataset == "📈 Comparison":
     
     with col1:
         st.markdown("""
-        <div class="metric-card">
+        <div class="metric-card" style="color:black;">
             <h4>🔍 For Analysis</h4>
             <p>Both methods reveal that product category and customer history are the strongest predictors of returns.</p>
         </div>
@@ -434,7 +434,7 @@ elif selected_dataset == "📈 Comparison":
     
     with col2:
         st.markdown("""
-        <div class="metric-card">
+        <div class="metric-card" style="color:black;">
             <h4>💡 For Business</h4>
             <p>Focus on improving product descriptions, sizing guides, and customer education rather than demographic targeting.</p>
         </div>
@@ -442,7 +442,7 @@ elif selected_dataset == "📈 Comparison":
     
     with col3:
         st.markdown("""
-        <div class="metric-card">
+        <div class="metric-card" style="color:black;">
             <h4>🚀 For Future</h4>
             <p>Combine both approaches with real-time data for dynamic return prediction and prevention strategies.</p>
         </div>
