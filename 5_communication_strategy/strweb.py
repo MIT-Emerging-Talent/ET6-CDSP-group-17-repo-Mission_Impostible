@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 from PIL import Image
+import os
+BASE_DIR = os.path.dirname(__file__)
 
 # Page configuration
 st.set_page_config(
@@ -174,28 +176,28 @@ elif selected_dataset == "📦 ASOS Dataset":
     
     with tab1:
         st.markdown("#### Return Frequency Distribution")
-        st.markdown('<img src="return_frequency.png">', unsafe_allow_html=True)
+        st.image(os.path.join(BASE_DIR, "return_frequency.png"))
         
         st.markdown("#### Return Rate Distribution")
-        st.markdown('<img src="return_rate_distribution.png">', unsafe_allow_html=True)
+        st.image(os.path.join(BASE_DIR, "return_rate_distribution.png"))
     
     with tab2:
         st.markdown("#### Return Rates by Age Group")
-        st.markdown('<img src="return_rate_by_age_group.png">', unsafe_allow_html=True)
+        st.image(os.path.join(BASE_DIR, "return_rate_by_age_group.png"))
         
         st.markdown("#### Customer Return Behavior")
-        st.markdown('<img src="customer_behavior_analysis.png">', unsafe_allow_html=True)
+        st.image(os.path.join(BASE_DIR, "customer_behavior_analysis.png"))
     
     with tab3:
         st.markdown("#### Top Product Types by Return Rate")
-        st.markdown('<img src="Top 10 Product Types by Return Rate.png">', unsafe_allow_html=True)
+        st.image(os.path.join(BASE_DIR, "Top 10 Product Types by Return Rate.png"))
         
         st.markdown("#### Top Brands by Return Rate")
-        st.markdown('<img src="Top 10 Brands by Return Rate.png">', unsafe_allow_html=True)
+        st.image(os.path.join(BASE_DIR, "Top 10 Brands by Return Rate.png"))
     
     with tab4:
         st.markdown("#### Shipping Countries by Return Rate")
-        st.markdown('<img src="Top 10 Shipping Countries by Return Rate.png">', unsafe_allow_html=True)
+        st.image(os.path.join(BASE_DIR, "Top 10 Shipping Countries by Return Rate.png"))
     
     # Model Performance
     st.markdown("### 🎯 Model Performance")
@@ -204,13 +206,13 @@ elif selected_dataset == "📦 ASOS Dataset":
     
     with col1:
         st.markdown("#### Logistic Regression Results")
-        st.markdown('<img src="confusion_matrix_logistic.png">', unsafe_allow_html=True)
-        st.markdown('<img src="feature_importance_logistic.png">', unsafe_allow_html=True)
+        st.image(os.path.join(BASE_DIR, "confusion_matrix_logistic.png"))
+        st.image(os.path.join(BASE_DIR, "feature_importance_logistic.png"))
     
     with col2:
         st.markdown("#### Random Forest Results")
-        st.markdown('<img src="confusion_matrix_rf.png">', unsafe_allow_html=True)
-        st.markdown('<img src="feature_importance_rf.png">', unsafe_allow_html=True)
+        st.image(os.path.join(BASE_DIR, "confusion_matrix_rf.png"))
+        st.image(os.path.join(BASE_DIR, "feature_importance_rf.png"))
 
 # TheLook Dataset Section
 elif selected_dataset == "🛒 TheLook Dataset":
@@ -272,64 +274,100 @@ elif selected_dataset == "🛒 TheLook Dataset":
     # Visualizations
     st.markdown("### 📊 Data Visualizations")
     
-    tab1, tab2, tab3, tab4 = st.tabs(["Category Analysis", "Geographic Patterns", "Model Performance", "Feature Importance"])
+    tab1, tab2, tab3, tab4 = st.tabs(["Category Analysis", "Geographic Patterns", "Model Performance", "Model Results"])
     
     with tab1:
         st.markdown("#### Return Rates by Product Category")
-        st.markdown('<img src="category_return_rates.png">', unsafe_allow_html=True)
+        st.image(os.path.join(BASE_DIR, "img", "category.png"))
         
         st.markdown("#### Seasonal Return Patterns")
-        st.markdown('<img src="seasonal_patterns.png">', unsafe_allow_html=True)
+        st.image(os.path.join(BASE_DIR,"img", "season.png"))
     
     with tab2:
         st.markdown("#### Returns by Country")
-        st.markdown('<img src="geographic_returns.png">', unsafe_allow_html=True)
+        st.image(os.path.join(BASE_DIR,"img", "country.png"))
         
         st.markdown("#### Distribution Center Performance")
-        st.markdown('<img src="distribution_center_analysis.png">', unsafe_allow_html=True)
+        st.image(os.path.join(BASE_DIR, "img", "dc.png"))
     
     with tab3:
-        st.markdown("#### Model Comparison")
-        st.markdown('<img src="model_comparison.png">', unsafe_allow_html=True)
+        st.markdown("#### Model Comparison", unsafe_allow_html=True)
+        st.markdown("""
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Accuracy</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1</th>
+      <th>ROC-AUC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Logistic</th>
+      <td>0.520958</td>
+      <td>0.09791</td>
+      <td>0.45862</td>
+      <td>0.16137</td>
+      <td>0.495341</td>
+    </tr>
+    <tr>
+      <th>XGBoost</th>
+      <td>0.899505</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.653133</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+""", unsafe_allow_html=True)
         
         st.markdown("#### ROC Curves")
-        st.markdown('<img src="roc_curves.png">', unsafe_allow_html=True)
+        st.image(os.path.join(BASE_DIR, "img", "ROC.png"))
     
     with tab4:
-        st.markdown("#### XGBoost Feature Importance")
-        st.markdown('<img src="xgboost_feature_importance.png">', unsafe_allow_html=True)
-        
-        st.markdown("#### SHAP Analysis")
-        st.markdown('<img src="shap_analysis.png">', unsafe_allow_html=True)
-    
-    # Model Results
-    st.markdown("### 🎯 Model Results")
-    
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        st.markdown("""
-        <div class="metric-card" style="color:black;">
-            <h4>📈 Logistic Regression</h4>
-            <ul>
-                <li><strong>Accuracy:</strong> Baseline performance</li>
-                <li><strong>Pros:</strong> Easy to interpret, fast training</li>
-                <li><strong>Cons:</strong> Limited pattern recognition</li>
-            </ul>
-        </div>
-        """, unsafe_allow_html=True)
-    
-    with col2:
-        st.markdown("""
-        <div class="metric-card" style="color:black;">
-            <h4>🚀 XGBoost</h4>
-            <ul>
-                <li><strong>ROC-AUC:</strong> 0.655 (65.5% accuracy)</li>
-                <li><strong>Pros:</strong> Better pattern recognition</li>
-                <li><strong>Cons:</strong> More complex, harder to interpret</li>
-            </ul>
-        </div>
-        """, unsafe_allow_html=True)
+        st.markdown("### 🎯 Model Results")
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown("""
+                <div class="metric-card" style="color:black;">
+                    <h4>📈 Logistic Regression</h4>
+                    <ul>
+                        <li><strong>Accuracy:</strong> Baseline performance</li>
+                        <li><strong>Pros:</strong> Easy to interpret, fast training</li>
+                        <li><strong>Cons:</strong> Limited pattern recognition</li>
+                    </ul>
+                </div>
+                """, unsafe_allow_html=True)
+        with col2:
+            st.markdown("""
+                <div class="metric-card" style="color:black;">
+                    <h4>🚀 XGBoost</h4>
+                    <ul>
+                        <li><strong>ROC-AUC:</strong> 0.655 (65.5% accuracy)</li>
+                        <li><strong>Pros:</strong> Better pattern recognition</li>
+                        <li><strong>Cons:</strong> More complex, harder to interpret</li>
+                    </ul>
+                </div>
+                """, unsafe_allow_html=True)
 
 # Comparison Section
 elif selected_dataset == "📈 Comparison":
