@@ -1,58 +1,121 @@
-# 📄 documentation.md – Data Preparation Phase
+# 🛠️ Technical Documentation: Product Return Data Preparation
 
-## 🧠 Non-Technical Summary
-In this step, we combined three different datasets into one cohesive table to make our data easier to work with in subsequent analysis stages. These datasets include records of customer events, customer details, and product features. Merging them lets us answer questions like:
+---
 
-- Which customers are returning items?
-- Which products are more likely to be returned?
+## 1. Data Description
 
-### 🎯 What We’re Sure About
-- The merging process worked without errors
-- We confirmed that hashed keys were successfully used to join the datasets
-- The output file was generated and saved correctly
+Three primary datasets were used:
 
-### ⚠️ What Might Introduce Error
-- If any `.p` file has mismatched keys, some data rows may be lost in the merge
-- The dataset only includes training data, not full customer histories
+| File Name                     | Description                          | Shape             |
+|------------------------------|--------------------------------------|-------------------|
+| `customer_nodes_training.csv`| Customer features                    | (777,001 × 30)    |
+| `product_nodes_training.csv` | Product (variant) features           | (411,495 × 44)    |
+| `event_table_training.csv`   | Customer-product interactions        | (1,369,133 × 3)   |
 
-## ⚙️ Technical Description
-### Step 1: Upload Raw Pickled Files
-We use Google Colab’s `files.upload()` method to import the training `.p` files manually. These are serialized with Python's pickle module and need to be loaded using `pd.read_pickle()`.
+- **Key Identifiers**:
+  - Customer ID: `hash(customerid)` → standardized to `customer_id`
+  - Product ID: `hash(variantid)` → standardized to `product_id`
+- **Target Variable**: `isreturned` (binary classification)
 
-### Step 2: Merge DataFrames
-We used Pandas `merge()` to join:
-- `event_table` with `customer_nodes` on `hash(customerId)`
-- The resulting DataFrame with `product_nodes` on `hash(variantID)`
+---
 
-### Step 3: Clean Column Names
-Renaming `hash(customerId)` ➝ `customer_id` and `hash(variantID)` ➝ `variant_id` improves readability for downstream work.
+## 2. Data Preprocessing
 
-### Step 4: Export Clean Data
-The merged DataFrame is saved as `asos_merged_training.csv` using `Path().resolve()` to confirm the full save path.
+### 🔤 Column Name Cleaning
+- Applied `clean_col_names` to all DataFrames:
+  - Stripped whitespace
+  - Converted to lowercase
+  - Replaced spaces with underscores
 
-## 🔁 Possible Alternative Approaches
-- Use hashing validation to ensure key integrity before merging
-- Add logs or counters to catch dropped rows
-- Integrate error handling with try/except blocks around `read_pickle`
+### 🎯 Label Identification
+- Target variable: `isreturned`
+- Label distribution:
+  - Returns (1): 757,227 (55.3%)
+  - Non-returns (0): 611,906 (44.7%)
 
-## 💾 Script Summary
-```python
-import pandas as pd
-from pathlib import Path
+### 🔗 Data Merging
+- `df_events` left-merged with `df_customers` on `hash(customerid)` ↔ `customer_id`
+- Result merged with `df_products` on `hash(variantid)` ↔ `product_id`
+- Final merged DataFrame shape: **(1,369,133 × 77)**
 
-# Load files
-with open("event_table_training.p", "rb") as f:
-    event = pd.read_pickle(f)
-with open("customer_nodes_training.p", "rb") as f:
-    cust = pd.read_pickle(f)
-with open("product_nodes_training.p", "rb") as f:
-    prod = pd.read_pickle(f)
+### 🧼 Missing Value Handling
+- Dropped columns with >80% missing values (none dropped)
+- Imputation strategies:
+  - **Numerical**: Median (`SimpleImputer`)
+  - **Categorical**: Constant `'missing'` (`SimpleImputer`)
 
-# Merge and rename
-merged = event.merge(cust, on="hash(customerId)")\
-               .merge(prod, on="hash(variantID)")
-merged.rename(columns={"hash(customerId)": "customer_id", "hash(variantID)": "variant_id"}, inplace=True)
+### 🧬 Feature Type Identification
+- Identified 73 numeric features and 3 categorical features
+- Excluded ID columns used for merging
 
-# Save
-merged.to_csv("asos_merged_training.csv", index=False)
-```
+### ⚙️ Preprocessing Pipelines
+- **Numerical Pipeline**:
+  - `SimpleImputer(strategy='median')`
+  - `StandardScaler()`
+- **Categorical Pipeline**:
+  - `SimpleImputer(strategy='constant', fill_value='missing')`
+  - `OneHotEncoder(handle_unknown='ignore', sparse_output=False)`
+- Combined using `ColumnTransformer`
+- Transformed feature matrix shape: **(1,369,133 × 107)**
+- Saved preprocessor as: `preprocessor_train.joblib`
+
+---
+
+## 3. Train/Validation Split
+
+- Used `train_test_split` with:
+  - `test_size=0.1`
+  - `stratify=y`
+  - `random_state=42`
+- Shapes:
+  - `X_train`: (1,232,219 × 107)
+  - `X_val`: (136,914 × 107)
+  - `y_train`: (1,232,219,)
+  - `y_val`: (136,914,)
+- Saved as: `tabular_train_val.joblib`
+
+---
+
+## 4. Bipartite Graph Creation
+
+Constructed using `networkx` to model customer-product interactions:
+
+### 🧩 Nodes
+- **Customers**: From `df_customers`, labeled `bipartite=0`
+- **Products**: From `df_products`, labeled `bipartite=1`
+- Node attributes: All non-ID, non-NA features
+
+### 🔗 Edges
+- Created from `df_events`
+- Each edge connects a customer to a product
+- Edge attribute: `label` = `isreturned`
+
+### 📊 Graph Stats
+- Nodes: **487,508**
+- Edges: **50,275**
+- Saved merged graph data as: `merged_events_train.joblib`
+
+---
+
+## 5. Technical Visualizations (Suggested)
+
+To enhance interpretability and validate preprocessing in the next step, we can do the following:
+
+### 🔥 Missingness Heatmap
+- Visualize missing data patterns in the merged DataFrame before column drops
+
+### 📈 Feature Distributions
+- **Numerical**: Histograms/density plots before and after scaling
+  - Examples: `yearofbirth`, `salespercustomer`, `avggbpprice`
+- **Categorical**: Bar plots showing category counts and imputation effects
+  - Example: `shippingcountry`
+
+### 🔗 Correlation Matrix
+- Heatmap of pairwise correlations among numerical features post-imputation
+
+### 🕸️ Bipartite Graph Properties
+- Degree distribution plots:
+  - Customer nodes: Number of products interacted with
+  - Product nodes: Number of customers interacted with
+- Subgraph visualization:
+  - Small sample of nodes and edges to illustrate structure
