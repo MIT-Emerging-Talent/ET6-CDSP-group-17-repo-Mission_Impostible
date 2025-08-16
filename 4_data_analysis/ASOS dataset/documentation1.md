@@ -156,11 +156,9 @@ Top Features from XGBoost:
 ## 🧠 SHAP Analysis
 
 * Static force plot:
-![SHAP Force Plot](Models/shap_force_plot.png)
-  
+![SHAP Force Plot](Models/shap_force_plot.png)  
 
 * Interactive HTML:
-
 ![SHAP Force Plot (Interactive)](Models/shap_force_plot.html)
 
 ---
