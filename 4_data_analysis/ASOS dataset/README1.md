@@ -1,6 +1,4 @@
-# ASOS Return Prediction Project
-
----
+# ASOS Return Prediction Analysis
 
 ## 🌍 Project Overview
 
@@ -47,13 +45,12 @@ We evaluated them using **ROC AUC**, which measures how well a model separates r
 | Logistic Regression| 0.739    | 0.749     | 0.793  | 0.820   |
 | Random Forest      | 0.725    | 0.742     | 0.771  | 0.801   |
 
-📊 ROC AUC Comparison:
-![Model ROC AUC Comparison](asos_return_prediction_artifacts/model_roc_comparison.png)
+📊 ROC AUC Comparison:  
+![Model ROC AUC Comparison](4_data_analysis/ASOS dataset/Models/model_roc_comparison.png)
 
 📉 ROC Curves:
-- ![XGBoost ROC](asos_return_prediction_artifacts/xgboost_roc_curve.png)
-- ![Logistic Regression ROC](asos_return_prediction_artifacts/logisticregression_roc_curve.png)
-- ![Random Forest ROC](asos_return_prediction_artifacts/randomforest_roc_curve.png)
+-![XGBoost ROC](4_data_analysis/ASOS dataset/Models/xgboost_roc_curve.png)
+![Logistic Regression ROC](4_data_analysis/ASOS dataset/Models/logisticregression_roc_curve.png)
 
 ---
 
@@ -66,8 +63,8 @@ XGBoost performed best with the highest ROC AUC. Strongest predictors of returns
 - **Shipping country** – regional differences in returns  
 - **Customer demographics** – gender, etc. had small influence  
 
-📊 Feature Importance:
-![XGBoost Feature Importance](asos_return_prediction_artifacts/xgboost_feature_importance.png)
+📊 Feature Importance:  
+![XGBoost Feature Importance](4_data_analysis/ASOS dataset/Models/xgboost_feature_importance.png)
 
 ---
 
@@ -76,10 +73,10 @@ XGBoost performed best with the highest ROC AUC. Strongest predictors of returns
 To explore patterns in return behavior, we used dimensionality reduction:
 
 - **PCA**: Revealed partial separation between returned and non-returned items  
-  ![PCA Plot](asos_return_prediction_artifacts/pca_plot.png)
+  ![PCA Plot](4_data_analysis/ASOS dataset/Models/pca_plot.png)
 
 - **t-SNE**: Showed more distinct clusters, though overlap remains  
-  ![t-SNE Plot](asos_return_prediction_artifacts/tsne_plot.png)
+  ![t-SNE Plot](4_data_analysis/ASOS dataset/Models/tsne_plot.png)
 
 Returns are influenced by complex patterns not easily separable in two dimensions.
 
@@ -112,4 +109,4 @@ Historical behavior (customer + product) drives returns more than demographics.
 
 1. Download the dataset from the [OSF ASOS Dataset](https://osf.io/c793h/)  
 2. Run the provided script: `run_analysis.py`  
-3. Artifacts (plots, metrics, SHAP feature importance, predictions) will be saved in the `asos_return_prediction_artifacts` folder  
+3. Artifacts (plots, metrics, SHAP feature importance, predictions) will be saved in the `Models` folder  
