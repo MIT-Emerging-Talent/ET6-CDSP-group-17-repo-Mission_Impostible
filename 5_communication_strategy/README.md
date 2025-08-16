@@ -1,8 +1,8 @@
-# ASOS Return Prediction: Results Communication
+# ASOS Return Prediction: Results Communication & Stakeholder Analysis
 
 ## 🌍 Project Overview
 
-This document communicates the main findings from the ASOS Return Prediction project. It focuses on **insights, patterns, and visualizations** to help understand why products are returned and how this knowledge can be applied.
+This document communicates the main findings from the ASOS Return Prediction project, integrating both **modeling results**, **data exploration insights**, and a **stakeholder analysis**. It focuses on patterns, feature importance, and visualizations to help understand why products are returned and how different stakeholders can use these insights.
 
 ---
 
@@ -21,19 +21,18 @@ Three models were evaluated for predicting returns:
 * **XGBoost** performed best in distinguishing returned vs. non-returned items.
 
 📊 ROC AUC Comparison:
-
-![Model ROC AUC Comparison](4_data_analysis/ASOS dataset/Models/model_roc_comparison.png)
+!\[Model ROC AUC Comparison]\(4\_data\_analysis/ASOS dataset/Models/model\_roc\_comparison.png)
 
 ---
 
 ### Feature Importance
 
-The most influential predictors of returns were:
+Most influential predictors of returns included:
 
 * **Customer past return rate**
 * **Product return rate**
 * **Shipping country**
-* **Customer demographics** (smaller effect)
+* **Customer demographics** (gender, age)
 
 📊 XGBoost Feature Importance:
 !\[XGBoost Feature Importance]\(4\_data\_analysis/ASOS dataset/Models/xgboost\_feature\_importance.png)
@@ -65,7 +64,7 @@ Interactive version: \[SHAP Force Plot (Interactive)]\(4\_data\_analysis/ASOS da
 
 ## 📊 Data Exploration Visualizations
 
-These charts from the initial data exploration highlight customer, product, and transaction-level patterns related to returns:
+These charts highlight customer, product, and transaction-level patterns related to returns:
 
 * **Shipping Countries with Highest Return Rates**
   !\[Top 10 Shipping Countries by Return Rate]\(4\_data\_exploration/ASOS dataset/Visualizations/Top%2010%20Shipping%20Countries%20by%20Return%20Rate.png)
@@ -96,6 +95,54 @@ These charts from the initial data exploration highlight customer, product, and 
 
 ---
 
+## 👥 Stakeholder Analysis
+
+### Target Audience
+
+A mid-sized online fashion retailer specializing in formal and event wear.
+
+**Key stakeholders:**
+
+* **Founder/CEO** – concerned with profitability, reputation, growth.
+* **Head of Merchandising/Buying** – impacts inventory and product selection.
+* **Marketing Manager** – manages promotions, customer communication, social media.
+* **E-commerce Manager** – responsible for website experience and product content.
+* **Operations/Customer Service Lead** – manages shipping, returns, and customer feedback.
+
+### Capabilities
+
+* Agility in decision-making (faster than large corporations).
+* Deep niche expertise in formal/event wear.
+* Direct customer feedback loop through service leads.
+
+### Constraints
+
+* Limited resources and smaller data teams.
+* Supplier influence limited.
+* High customer expectations for fit and quality.
+
+### Communication Strategy
+
+* **Primary**: Hands-on strategy workshop with stakeholders.
+* **Secondary**: Practical “Playbook Report” (e.g., *5-Step Playbook to Reduce Returns by 15%*).
+* **Tertiary**: Lightweight integrated tool to predict product return risk.
+
+### What Stakeholders Should Learn
+
+* Pinpoint the biggest drivers of returns (e.g., product types, fabrics).
+* Quantify the financial drain of returns.
+* Spot high-risk products earlier in the buying process.
+* Appreciate the value of better product data and descriptions.
+
+### Recommended Actions
+
+* **Buying Team**: Review high-risk product categories; negotiate smaller initial orders.
+* **Marketing**: Create content for better customer fit guidance; pause ads on high-return items.
+* **E-commerce Manager**: Update product pages with better visuals and fit notes.
+* **CEO**: Champion data-driven strategy with a dedicated returns-reduction budget.
+
+---
+
 ## 📈 Insights Summary
 
 * **Customer behavior** is the strongest driver of returns.
@@ -108,7 +155,7 @@ These charts from the initial data exploration highlight customer, product, and 
 
 * Predictions are **probabilistic**, not deterministic.
 * External factors (e.g., trends, seasonality) are not included.
-* Missing features such as product descriptions or fit issues limit interpretability.
+* Missing features such as product descriptions, material, and fit issues limit interpretability.
 
 ---
 
@@ -120,7 +167,8 @@ These charts from the initial data exploration highlight customer, product, and 
   * Improve inventory and logistics planning
   * Target high-return product categories for improvement
   * Personalize customer guidance to reduce avoidable returns
+* Stakeholders can use these findings to implement **practical, high-impact changes** across buying, marketing, e-commerce, and customer service.
 
 ---
 
-*This document is intended to communicate results and support decision-making, not to provide detailed modeling instructions.*
+*This document communicates results, visualizations, and stakeholder-specific recommendations to support decision-making.*
