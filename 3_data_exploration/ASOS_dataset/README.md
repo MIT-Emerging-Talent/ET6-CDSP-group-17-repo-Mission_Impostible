@@ -1,4 +1,4 @@
-# ASOS Product Return Analysis
+# ASOS Product Return Data Exploration
 
 ## Overview
 
@@ -17,7 +17,7 @@ This repository investigates predictors of product returns in fashion e-commerce
 
 ```bash
 
-├── 4_data_analysis/
+├── 4_data_exploration/
 │   ├── ASOS dataset/
 │   │   └── Visualizations/
 │   │       ├── return_frequency.png
@@ -37,7 +37,7 @@ This repository investigates predictors of product returns in fashion e-commerce
 │   │       ├── avgGbpPrice_distribution.png
 │   │       ├── avgDiscountValue_distribution.png
 │   │       └── salesPerProduct_distribution.png
-├── asos_return_analysis.ipynb
+├── ASOS_DATA_Exploration.ipynb
 ├── README.md
 └── documentation.pdf
 ```
