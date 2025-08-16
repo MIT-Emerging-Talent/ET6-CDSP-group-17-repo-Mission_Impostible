@@ -1,10 +1,10 @@
 # Data Preparation
 
 ## 🗂 Project Overview
-This repository contains the **data preparation step** of a multi-phase analysis project on e-commerce product returns using the [**ASOS GraphReturns Dataset**](https://osf.io/c793h/). In this notebook, we focus on:
+This repository contains the **data preparation step** of a multi-phase analysis project on e-commerce product returns using the [**ASOS GraphReturns Dataset**](https://drive.google.com/drive/folders/1xpCMMrpNtFms7KKrCIVClTbYNZQUcSpg?usp=sharing). In this notebook, we focus on:
 
 - Uploading and reading raw data files (.p format)
-- Converting the .p files to csv format
+- Converting the .p files to CSV format
 - Merging the event, customer, and product datasets on hashed IDs
 - Renaming critical columns for clarity
 - Saving the processed, merged dataset for downstream tasks
@@ -16,10 +16,10 @@ Uploaded via Google Colab interface:
 - `product_nodes_training.csv`
 
 ## 🧪 Output File
-- `asos_merged_training.csv` — the merged and cleaned training dataset.
+- `asos_merged_training.csv` merged and cleaned training dataset &  Saved merged graph data as: `merged_events_train.joblib`.
 1.  **Customer Information:** Details about our customers, such as their age range, gender, where they live, and past purchase and return history.
 2.  **Product Information:** Details about the products, including their type, brand, price, and past sales and return rates.
-3.  **Event Information:** Records of every time a customer interacted with a product, specifically whether the product was eventually returned or not. This is the key piece of information we want to predict.
+3.  **Event Information:** Records of every time a customer interacts with a product, specifically whether the product was eventually returned or not. This is the key piece of information we want to predict.
 
 By linking the event information with the customer and product details, we created a comprehensive dataset for our analysis.
 
@@ -60,5 +60,5 @@ Here is a schematic of the merging process:
         [ event_table ]  <== merge on customerId and variantID
                |
                v
-      asos_merged_training.csv
+asos_merged_training.csv & merged_events_train.joblib
 ```
