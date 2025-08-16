@@ -107,14 +107,14 @@ Each model was trained on X\_train and evaluated on X\_test using:
 
 ### 📊 ROC AUC Comparison
 
-!\[Model ROC AUC Comparison]\(4\_data\_analysis/ASOS dataset/Models/model\_roc\_comparison.png)
+![Model ROC AUC Comparison](Models/model_roc_comparison.png)
+
 
 ### 📉 ROC Curves
 
-* !\[XGBoost ROC]\(4\_data\_analysis/ASOS dataset/Models/xgboost\_roc\_curve.png)
-* !\[Logistic Regression ROC]\(4\_data\_analysis/ASOS dataset/Models/logisticregression\_roc\_curve.png)
+![XGBoost ROC](Models/xgboost_roc_curve.png)
+![Logistic Regression ROC](Models/logisticregression_roc_curve.png)
 
----
 
 ## 🔥 Feature Importance
 
@@ -128,11 +128,12 @@ Top Features from XGBoost:
 
 ### 📊 XGBoost Feature Importance
 
-!\[XGBoost Feature Importance]\(4\_data\_analysis/ASOS dataset/Models/xgboost\_feature\_importance.png)
+![XGBoost Feature Importance](Models/xgboost_feature_importance.png)
 
 ### 📊 Random Forest Feature Importance
 
-!\[Random Forest Feature Importance]\(4\_data\_analysis/ASOS dataset/Models/randomforest\_feature\_importance.png)
+
+![Random Forest Feature Importance](Models/randomforest_feature_importance.png)
 
 ---
 
@@ -142,21 +143,25 @@ Top Features from XGBoost:
 
 * Sample size: up to 10,000
 * Revealed partial separation but significant overlap
-  !\[PCA Plot]\(4\_data\_analysis/ASOS dataset/Models/pca\_plot.png)
+  ![PCA Plot](Models/pca_plot.png)
 
 ### t-SNE (t-Distributed Stochastic Neighbor Embedding)
 
 * Sample size: up to 3,000
 * Showed more distinct clusters, but still intermixed
   !\[t-SNE Plot]\(4\_data\_analysis/ASOS dataset/Models/tsne\_plot.png)
-
+ ![t-SNE Plot](Models/tsne_plot.png)
 ---
 
 ## 🧠 SHAP Analysis
 
 * Static force plot:
-  !\[SHAP Force Plot]\(4\_data\_analysis/ASOS dataset/Models/shap/_force/_plot.png)
-* Interactive HTML: \[SHAP Force Plot (Interactive)]\(4\_data\_analysis/ASOS dataset/Models/shap\_force\_plot.html)
+![SHAP Force Plot](Models/shap_force_plot.png)
+  
+
+* Interactive HTML:
+
+![SHAP Force Plot (Interactive)](Models/shap_force_plot.html)
 
 ---
 
