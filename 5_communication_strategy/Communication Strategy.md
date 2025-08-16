@@ -1,9 +1,5 @@
 # 🗣️ ASOS Return Prediction: Communication Strategy for Non-Technical Audiences
 
-> 📌 Click on sections below to expand and explore. Designed for mid-sized fashion retailers.
-
----
-
 ## 🎯 Purpose
 
 <details>
