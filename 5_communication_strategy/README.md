@@ -35,10 +35,12 @@ Most influential predictors of returns included:
 * **Customer demographics** (gender, age)
 
 📊 XGBoost Feature Importance:
-!\[XGBoost Feature Importance]\(4\_data\_analysis/ASOS dataset/Models/xgboost\_feature\_importance.png)
+
+![XGBoost Feature Importance](Visualizations/xgboost_feature_importance.png)
 
 📊 Random Forest Feature Importance:
-!\[Random Forest Feature Importance]\(4\_data\_analysis/ASOS dataset/Models/randomforest\_feature\_importance.png)
+
+![Random Forest Feature Importance](Visualizations/randomforest_feature_importance.png)
 
 ---
 
@@ -47,18 +49,21 @@ Most influential predictors of returns included:
 #### Dimensionality Reduction
 
 * **PCA**: Showed partial separation between returned and non-returned items
-  !\[PCA Plot]\(4\_data\_analysis/ASOS dataset/Models/pca\_plot.png)
 
-* **t-SNE**: Showed more distinct clusters but still overlapping
-  !\[t-SNE Plot]\(4\_data\_analysis/ASOS dataset/Models/tsne\_plot.png)
+  ![PCA Plot](Visualizations/pca_plot.png)
+  
+* **t-SNE**: Showed more distinct clusters, but still overlapping
+ ![t-SNE Plot](Visualizations/tsne_plot.png)
+ 
 
 #### SHAP Analysis
 
 * Explains individual predictions and global feature impact
 
-Static force plot:
-!\[SHAP Force Plot]\(4\_data\_analysis/ASOS dataset/Models/shap\_force\_plot.png)
-Interactive version: \[SHAP Force Plot (Interactive)]\(4\_data\_analysis/ASOS dataset/Models/shap\_force\_plot.html)
+
+* Static force plot:
+![SHAP Force Plot](Visualizations/shap_force_plot.png)  
+
 
 ---
 
@@ -67,31 +72,32 @@ Interactive version: \[SHAP Force Plot (Interactive)]\(4\_data\_analysis/ASOS da
 These charts highlight customer, product, and transaction-level patterns related to returns:
 
 * **Shipping Countries with Highest Return Rates**
-  !\[Top 10 Shipping Countries by Return Rate]\(4\_data\_exploration/ASOS dataset/Visualizations/Top%2010%20Shipping%20Countries%20by%20Return%20Rate.png)
+ ![Top 10 Shipping Countries by Return Rate](Visualizations/Top%2010%20Shipping%20Countries%20by%20Return%20Rate.png)
 
 * **Product Types with Highest Return Rates**
-  !\[Top 10 Product Types by Return Rate]\(4\_data\_exploration/ASOS dataset/Visualizations/Top%2010%20Product%20Types%20by%20Return%20Rate.png)
+![Top 10 Product Types by Return Rate](Visualizations/Top%2010%20Product%20Types%20by%20Return%20Rate.png)
 
 * **Brands with Highest Return Rates**
-  !\[Top 10 Brands by Return Rate]\(4\_data\_exploration/ASOS dataset/Visualizations/Top%2010%20Brands%20by%20Return%20Rate.png)
+![Top 10 Brands by Return Rate](Visualizations/Top%2010%20Brands%20by%20Return%20Rate.png)
 
 * **Return Rate by Age Group**
-  !\[Return Rate by Age Group]\(4\_data\_exploration/ASOS dataset/Visualizations/return\_rate\_by\_age\_group.png)
+![Average Return Rate by Age Group](Visualizations/return_rate_by_age.png)
 
 * **Return Rate by Gender**
-  !\[Return Rate by Gender]\(4\_data\_exploration/ASOS dataset/Visualizations/return\_rate\_by\_gender.png)
+![Average Return Rate by Age Group](Visualizations/return_rate_by_gender.png)
 
 * **Return Rate by Premier Status**
-  !\[Return Rate by Premier Status]\(4\_data\_exploration/ASOS dataset/Visualizations/return\_rate\_by\_premier.png)
+![Average Return Rate by Premier Status](Visualizations/return_rate_by_premier.png)
 
 * **Customer Purchase Behavior**
-  !\[Sales Per Customer Distribution]\(4\_data\_exploration/ASOS dataset/Visualizations/salesPerCustomer\_distribution.png)
-  !\[Returns Per Customer Distribution]\(4\_data\_exploration/ASOS dataset/Visualizations/returnsPerCustomer\_distribution.png)
+![Distribution of salesPerCustomer by Return Status](Visualizations/salesPerCustomer_by_return_status.png)
+![Distribution of returnsPerCustomer by Return Status](Visualizations/returnsPerCustomer_by_return_status.png)
+
 
 * **Product Pricing & Discounts**
-  !\[Average GBP Price Distribution]\(4\_data\_exploration/ASOS dataset/Visualizations/avgGbpPrice\_distribution.png)
-  !\[Average Discount Value Distribution]\(4\_data\_exploration/ASOS dataset/Visualizations/avgDiscountValue\_distribution.png)
-  !\[Sales Per Product Distribution]\(4\_data\_exploration/ASOS dataset/Visualizations/salesPerProduct\_distribution.png)
+![Distribution of avgGbpPrice by Return Status](Visualizations/avgGbpPrice_by_return_status.png)
+![Distribution of avgDiscountValue by Return Status](Visualizations/avgDiscountValue_by_return_status.png)
+![Distribution of salesPerProduct by Return Status](Visualizations/salesPerProduct_by_return_status.png)
 
 ---
 
