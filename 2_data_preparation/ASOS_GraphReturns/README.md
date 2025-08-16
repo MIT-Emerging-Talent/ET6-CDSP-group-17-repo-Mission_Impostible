@@ -1,11 +1,22 @@
-## Project Overview
+# Data Preparation
 
-This project aims to understand and predict whether a product purchased by a customer is likely to be returned. By analyzing past purchasing behavior and characteristics of both customers and products, we can help businesses anticipate returns and potentially reduce them.
+## 🗂 Project Overview
+This repository contains the **data preparation step** of a multi-phase analysis project on e-commerce product returns using the [**ASOS GraphReturns Dataset**](https://osf.io/c793h/). In this notebook, we focus on:
 
-## Data Used
+- Uploading and reading raw data files (.p format)
+- Converting the .p files to csv format
+- Merging the event, customer, and product datasets on hashed IDs
+- Renaming critical columns for clarity
+- Saving the processed, merged dataset for downstream tasks
 
-We used information from three main sources, which were brought together to get a complete picture:
+## 📁 Input Files
+Uploaded via Google Colab interface:
+- `event_table_training.csv`
+- `customer_nodes_training.csv`
+- `product_nodes_training.csv`
 
+## 🧪 Output File
+- `asos_merged_training.csv` — the merged and cleaned training dataset.
 1.  **Customer Information:** Details about our customers, such as their age range, gender, where they live, and past purchase and return history.
 2.  **Product Information:** Details about the products, including their type, brand, price, and past sales and return rates.
 3.  **Event Information:** Records of every time a customer interacted with a product, specifically whether the product was eventually returned or not. This is the key piece of information we want to predict.
@@ -27,21 +38,27 @@ So far, we have successfully completed the initial steps of preparing the data f
 
 *   Successfully combined information from the customer, product, and event data sources.
 *   Cleaned up column names and handled a significant amount of missing data by removing features with too much missing information and filling in gaps for others.
-*   Transformed the data and split it into training and testing sets, ready for training a predictive model.
 *   Built a network showing connections between customers and products based on their interactions.
-
-We also looked at the event data and found that returns (`isreturned` = 1) happen slightly more often than non-returns (`isreturned` = 0). Specifically, about 55% of events in our training data were returns.
-
-## Visualizations
-
-To better understand the data and our findings, the following visualizations would be helpful:
-
-*   **Return Distribution:** A simple bar chart showing the count or percentage of returned vs. non-returned items.
-*   **Data Linkage Diagram:** A diagram illustrating how the Customer, Product, and Event data tables are connected, showing the linking points (customer ID and product ID).
-*   **Customer-Product Network Snippet:** A visualization of a small part of the customer-product network to show how customers and products are linked by events. This could highlight customers with many interactions or products with many returns.
-*   **Feature Distributions:** Bar charts or histograms showing the distribution of key customer features (e.g., age groups, most common shipping countries) and product features (e.g., top product types, brand distribution, price ranges).
 
 ## Next Steps
 
 The next step is to train a predictive model using the prepared data and the customer-product network to predict the likelihood of a return. This analysis can ultimately help businesses make better decisions, such as improving product descriptions, targeting customers more effectively, or optimizing return processes.
 """
+
+## ▶️ How to Run
+1. Open the `01_data_preparation.ipynb` notebook in Google Colab.
+2. Upload the three `.p` files when prompted.
+3. The notebook will generate `asos_merged_training.csv` for use in the next analysis step.
+
+## 📊 Visual Summary
+Here is a schematic of the merging process:
+
+```text
+[customer_nodes]      [product_nodes]
+       \                   /
+        \                 /
+        [ event_table ]  <== merge on customerId and variantID
+               |
+               v
+      asos_merged_training.csv
+```
