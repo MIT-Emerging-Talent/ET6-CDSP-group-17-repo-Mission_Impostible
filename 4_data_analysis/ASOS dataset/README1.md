@@ -1,71 +1,115 @@
-
 # ASOS Return Prediction Project
 
-## Project Overview
+---
 
-This project aims to build a machine learning model to predict whether a customer will return an item purchased from ASOS. By accurately predicting returns, ASOS can potentially optimize inventory, reduce costs associated with returns, and improve the customer experience.
+## 🌍 Project Overview
 
-## The Data
+This project explores whether we can predict if a customer will return an item purchased from ASOS. Product returns are costly for both the business and the customer experience. By building predictive models, ASOS can:
 
-The analysis uses a dataset containing various information related to customer purchases. This includes:
+- Optimize inventory management  
+- Reduce logistics and handling costs  
+- Improve customer satisfaction by identifying patterns leading to returns  
 
-*   **Customer Information:** Details about the customer, such as a unique identifier and year of birth.
-*   **Product Information:** Details about the purchased item, including its unique identifier, brand, and type.
-*   **Historical Behavior:** Aggregated information about the customer's and product's past return rates and sales.
-*   **Order Details:** Information related to the specific purchase event.
+We analyzed over 1.3 million purchase records from the [ASOS Graph Returns Dataset](https://osf.io/c793h/), introduced in the paper [Customer and Product Graphs for Return Prediction in Fashion E-commerce (2023)](https://arxiv.org/pdf/2302.14096). This dataset supports research in graph-based machine learning and recommender systems.
 
-Before training the models, the data was cleaned and prepared. This involved handling missing information and transforming some data into a format suitable for the machine learning models.
+---
 
-## Our Approach: Using Machine Learning
+## 📊 The Data
 
-To predict returns, we trained several machine learning models on the prepared data. These models learn patterns from past purchases and returns to make predictions on new orders. We compared the performance of three different models:
+The dataset contains millions of e-commerce transactions enriched with:
 
-*   **Random Forest:** An ensemble model that combines multiple decision trees.
-*   **Logistic Regression:** A simpler model that estimates the probability of return based on the input features.
-*   **XGBoost:** A powerful gradient boosting model known for its high performance.
+- **Customer Information**: demographics (e.g., year of birth, gender)  
+- **Product Information**: item ID, brand, and type  
+- **Historical Behavior**: aggregated customer and product return rates  
+- **Order Details**: purchase events, labeled with whether the item was returned  
 
-## Model Performance
+Before analysis, the data was cleaned, missing values handled, and categorical features encoded.
 
-We evaluated the models based on how well they could distinguish between orders that would be returned and those that wouldn't. A key metric for this is the **ROC AUC** (Receiver Operating Characteristic Area Under the Curve). In simple terms, a higher ROC AUC means the model is better at correctly ranking potential returns higher than non-returns. An AUC of 0.5 is no better than random guessing, while an AUC of 1.0 is a perfect model.
+---
 
-Here's how the models performed:
+## 🤖 Our Approach
 
-![Model ROC AUC Comparison](model_roc_comparison.png)
+We trained three machine learning models to predict whether an item would be returned:
 
-As you can see, the **XGBoost** model achieved the highest ROC AUC, indicating it is the best-performing model for this prediction task among the ones we tested.
+- **Random Forest** – Combines many decision trees  
+- **Logistic Regression** – A simpler model that estimates probabilities  
+- **XGBoost** – A high-performance boosting model  
 
-## What Influences Returns? (Feature Importance)
+We evaluated them using **ROC AUC**, which measures how well a model separates returns vs. non-returns.
 
-Understanding which factors the models consider most important helps us gain insights into why items are returned. The XGBoost model, being the best performer, highlighted several key features:
+---
 
-![XGBoost Top 20 Feature Importances](xgboost_feature_importance.png)
+## 🏆 Results
 
-The most important feature by a significant margin is the **`num__customerreturnrate`**. This makes intuitive sense – customers who have returned items frequently in the past are more likely to return items in the future. Other important factors include:
+| Model               | Accuracy | Precision | Recall | ROC AUC |
+|--------------------|----------|-----------|--------|---------|
+| XGBoost            | 0.742    | 0.751     | 0.798  | 0.825   |
+| Logistic Regression| 0.739    | 0.749     | 0.793  | 0.820   |
+| Random Forest      | 0.725    | 0.742     | 0.771  | 0.801   |
 
-*   **`cat__shippingcountry_missing`**: Indicates if the shipping country information is missing, which could be related to certain return behaviors or data collection issues.
-*   **`num__productreturnrate`**: Products that are frequently returned by other customers are also more likely to be returned.
-*   **`num__ismale`**: Gender appears to have some influence on return behavior.
-*   **`num__country_g` / `cat__shippingcountry_Country_G`**: Specific countries seem to have different return patterns.
+📊 ROC AUC Comparison:
+![Model ROC AUC Comparison](asos_return_prediction_artifacts/model_roc_comparison.png)
 
-These insights suggest that both customer-specific behavior and product characteristics, along with shipping location, play a crucial role in predicting returns.
+📉 ROC Curves:
+- ![XGBoost ROC](asos_return_prediction_artifacts/xgboost_roc_curve.png)
+- ![Logistic Regression ROC](asos_return_prediction_artifacts/logisticregression_roc_curve.png)
+- ![Random Forest ROC](asos_return_prediction_artifacts/randomforest_roc_curve.png)
 
-## Visualizing the Data
+---
 
-To get a better sense of how the different orders relate to each other based on their features, we used dimensionality reduction techniques to visualize the data in two dimensions.
+## 🔍 What Influences Returns?
 
-**PCA (Principal Component Analysis):**
+XGBoost performed best with the highest ROC AUC. Strongest predictors of returns:
 
-![PCA: Return Clusters](pca_plot.png)
+- **Customer past return rate** – most important factor  
+- **Product return rate** – some products are “return-prone”  
+- **Shipping country** – regional differences in returns  
+- **Customer demographics** – gender, etc. had small influence  
 
-PCA tries to find the main directions of variation in the data. This plot shows some separation between returned (1) and non-returned (0) items, although there is significant overlap, suggesting that predicting returns is a complex task.
+📊 Feature Importance:
+![XGBoost Feature Importance](asos_return_prediction_artifacts/xgboost_feature_importance.png)
 
-**t-SNE (t-Distributed Stochastic Neighbor Embedding):**
+---
 
-![t-SNE: Return Clusters](tsne_plot.png)
+## 📈 Visual Insights
 
-t-SNE is another technique that tries to preserve the local relationships between data points. This plot shows more distinct clusters, but again, the returned and non-returned items are mixed, indicating that while there are patterns, they are not easily separable in two dimensions based on these features alone.
+To explore patterns in return behavior, we used dimensionality reduction:
 
-## Conclusion
+- **PCA**: Revealed partial separation between returned and non-returned items  
+  ![PCA Plot](asos_return_prediction_artifacts/pca_plot.png)
 
-This project successfully built and evaluated machine learning models to predict ASOS item returns. The XGBoost model showed the best performance, and the analysis of feature importance confirmed that historical return rates are strong indicators of future returns. These findings can inform strategies to reduce returns and improve business operations.
+- **t-SNE**: Showed more distinct clusters, though overlap remains  
+  ![t-SNE Plot](asos_return_prediction_artifacts/tsne_plot.png)
 
+Returns are influenced by complex patterns not easily separable in two dimensions.
+
+---
+
+## ⚖️ Certainty & Limitations
+
+- Predictions are **probabilistic**, not deterministic  
+- Influenced by fashion trends, style preferences, and external factors not in the dataset  
+- Missing shipping data introduces uncertainty  
+- Dataset covers a specific historical window; future behavior may differ  
+
+---
+
+## ✅ Conclusion
+
+Returns are predictable to a useful extent.  
+XGBoost is the strongest tool tested.  
+Historical behavior (customer + product) drives returns more than demographics.
+
+**Business impact:**
+
+- Better inventory planning  
+- Improved size & description guidance  
+- Reduced logistics costs from returns  
+
+---
+
+## 📂 How to Run the Project
+
+1. Download the dataset from the [OSF ASOS Dataset](https://osf.io/c793h/)  
+2. Run the provided script: `run_analysis.py`  
+3. Artifacts (plots, metrics, SHAP feature importance, predictions) will be saved in the `asos_return_prediction_artifacts` folder  
