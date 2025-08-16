@@ -149,7 +149,7 @@ Top Features from XGBoost:
 
 * Sample size: up to 3,000
 * Showed more distinct clusters, but still intermixed
-  !\[t-SNE Plot]\(4\_data\_analysis/ASOS dataset/Models/tsne\_plot.png)
+ 
  ![t-SNE Plot](Models/tsne_plot.png)
 ---
 
