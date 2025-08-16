@@ -46,11 +46,14 @@ We evaluated them using **ROC AUC**, which measures how well a model separates r
 | Random Forest      | 0.725    | 0.742     | 0.771  | 0.801   |
 
 📊 ROC AUC Comparison:  
-![Model ROC AUC Comparison](4_data_analysis/ASOS dataset/Models/model_roc_comparison.png)
+
+![Model ROC AUC Comparison](Models/model_roc_comparison.png)
 
 📉 ROC Curves:
--![XGBoost ROC](4_data_analysis/ASOS dataset/Models/xgboost_roc_curve.png)
-![Logistic Regression ROC](4_data_analysis/ASOS dataset/Models/logisticregression_roc_curve.png)
+
+![XGBoost ROC]](Models/xgboost_roc_curve.png)
+![Logistic Regression ROC](Models/logisticregression_roc_curve.png)
+
 
 ---
 
@@ -61,10 +64,10 @@ XGBoost performed best with the highest ROC AUC. Strongest predictors of returns
 - **Customer past return rate** – most important factor  
 - **Product return rate** – some products are “return-prone”  
 - **Shipping country** – regional differences in returns  
-- **Customer demographics** – gender, etc. had small influence  
+- **Customer demographics** – gender, etc., had a small influence  
 
 📊 Feature Importance:  
-![XGBoost Feature Importance](4_data_analysis/ASOS dataset/Models/xgboost_feature_importance.png)
+![XGBoost Feature Importance](Models/xgboost_feature_importance.png)
 
 ---
 
@@ -73,10 +76,10 @@ XGBoost performed best with the highest ROC AUC. Strongest predictors of returns
 To explore patterns in return behavior, we used dimensionality reduction:
 
 - **PCA**: Revealed partial separation between returned and non-returned items  
-  ![PCA Plot](4_data_analysis/ASOS dataset/Models/pca_plot.png)
+   ![PCA Plot](Models/pca_plot.png)
 
 - **t-SNE**: Showed more distinct clusters, though overlap remains  
-  ![t-SNE Plot](4_data_analysis/ASOS dataset/Models/tsne_plot.png)
+ ![t-SNE Plot](Models/tsne_plot.png)
 
 Returns are influenced by complex patterns not easily separable in two dimensions.
 
