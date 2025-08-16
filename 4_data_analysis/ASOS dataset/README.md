@@ -8,8 +8,8 @@ This repository investigates predictors of product returns in fashion e-commerce
 
 📚 **Data & Research Sources**:
 - [Dataset on OSF](https://osf.io/c793h/)
-- [Research Summary on ResearchGate](https://www.researchgate.net/publication/370928152_Graph-Based_Representation_Learning_to_Predict_Returns_in_Fashion_E-Commerce)
-- [Springer Publication](https://link.springer.com/chapter/10.1007/978-3-031-30820-8_26)
+- [Research Summary on ResearchGate](https://arxiv.org/pdf/2302.14096)
+- [Springer Publication](https://link.springer.com/chapter/10.1007/978-3-031-22192-7_6)
 
 ---
 
