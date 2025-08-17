@@ -371,119 +371,198 @@ elif selected_dataset == "🛒 TheLook Dataset":
 # Comparison Section
 elif selected_dataset == "📈 Comparison":
     st.markdown("## 📈 Method Comparison")
-    
-    st.markdown("""
-    <div style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
-        Both approaches offer unique insights into e-commerce returns. Here's how they compare:
-    </div>
-    """)
-    
-    # Comparison table
-    st.markdown("### ⚖️ Head-to-Head Comparison")
-    
-    comparison_data = {
-        "Aspect": ["Data Type", "Accuracy", "Interpretability", "Business Use", "Technical Complexity", "Data Requirements"],
-        "ASOS (Graph Method)": [
-            "Customer-Product Networks", 
-            "75% (Good)", 
-            "Moderate - Shows relationships", 
-            "Understanding customer segments", 
-            "High - Requires graph expertise", 
-            "Needs relationship data"
-        ],
-        "TheLook (Traditional Method)": [
-            "Individual Transactions", 
-            "65% (Moderate)", 
-            "High - Clear feature impact", 
-            "Operational decisions", 
-            "Low - Standard ML approach", 
-            "Standard transaction data"
-        ]
-    }
-    
-    comparison_df = pd.DataFrame(comparison_data)
-    st.table(comparison_df)
-    
-    # When to use each method
-    st.markdown("### 🎯 When to Use Each Method")
-    
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        st.markdown("""
-        <div class="insight-box" style="color:black;">
-            <h4>📦 Use ASOS Method When:</h4>
-            <ul>
-                <li>You have rich customer-product interaction data</li>
-                <li>You want to understand customer segments</li>
-                <li>You're building recommendation systems</li>
-                <li>You have technical expertise in graph analysis</li>
-                <li>You want to find hidden patterns in behavior</li>
-            </ul>
+    st.markdown(
+        """
+        <div style="text-align:center; font-size:1.1rem; color:#666; margin-bottom:1rem;">
+            Two ways to predict returns. See the differences and pick what fits your need.
         </div>
-        """, unsafe_allow_html=True)
-    
-    with col2:
-        st.markdown("""
-        <div class="insight-box" style="color:black;">
-            <h4>🛒 Use TheLook Method When:</h4>
-            <ul>
-                <li>You need quick, interpretable results</li>
-                <li>You're making operational decisions</li>
-                <li>You have standard transaction data</li>
-                <li>You need to explain results to stakeholders</li>
-                <li>You're starting with basic analytics</li>
-            </ul>
-        </div>
-        """, unsafe_allow_html=True)
-    
-    # Business recommendations
-    st.markdown("### 💼 Business Recommendations")
-    
-    st.markdown("""
-    <div class="dataset-card" style="color:black;">
-        <h3>🚀 Best Practice Approach</h3>
-        <p><strong>Start with TheLook method</strong> for immediate insights and operational improvements. 
-        <strong>Evolve to ASOS method</strong> as you collect more data and build technical capabilities.</p>
-        
-        <h4>Implementation Roadmap:</h4>
-        <ol>
-            <li><strong>Phase 1:</strong> Implement basic return prediction with transaction data</li>
-            <li><strong>Phase 2:</strong> Collect customer behavior and interaction data</li>
-            <li><strong>Phase 3:</strong> Build graph-based models for deeper insights</li>
-            <li><strong>Phase 4:</strong> Combine both approaches for maximum effectiveness</li>
-        </ol>
-    </div>
-    """, unsafe_allow_html=True)
-    
-    # Final insights
-    st.markdown("### 🎯 Key Takeaways")
-    
-    col1, col2, col3 = st.columns(3)
-    
-    with col1:
-        st.markdown("""
-        <div class="metric-card" style="color:black;">
-            <h4>🔍 For Analysis</h4>
-            <p>Both methods reveal that product category and customer history are the strongest predictors of returns.</p>
-        </div>
-        """, unsafe_allow_html=True)
-    
-    with col2:
-        st.markdown("""
-        <div class="metric-card" style="color:black;">
-            <h4>💡 For Business</h4>
-            <p>Focus on improving product descriptions, sizing guides, and customer education rather than demographic targeting.</p>
-        </div>
-        """, unsafe_allow_html=True)
-    
-    with col3:
-        st.markdown("""
-        <div class="metric-card" style="color:black;">
-            <h4>🚀 For Future</h4>
-            <p>Combine both approaches with real-time data for dynamic return prediction and prevention strategies.</p>
-        </div>
-        """, unsafe_allow_html=True)
+        """,
+        unsafe_allow_html=True,
+    )
+
+    # Create rich tabs for a clearer experience
+    tab_overview, tab_side, tab_perf, tab_when, tab_next = st.tabs([
+        "Summary", "Side-by-Side", "Performance", "When to Use", "Next Steps"
+    ])
+
+    # 1) SUMMARY TAB
+    with tab_overview:
+        c1, c2 = st.columns(2)
+        with c1:
+            st.markdown(
+                """
+                <div class="dataset-card">
+                    <h3>📦 ASOS — Graph Method</h3>
+                    <p style="margin-top:0.5rem;">Learns patterns from connections between <strong>customers</strong> and <strong>products</strong>.</p>
+                    <ul>
+                        <li><strong>Best for:</strong> finding hidden relationships, segments</li>
+                        <li><strong>Data:</strong> interactions (who bought what)</li>
+                        <li><strong>Result:</strong> ~75% accuracy</li>
+                    </ul>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+        with c2:
+            st.markdown(
+                """
+                <div class="dataset-card">
+                    <h3>🛒 TheLook — Tabular Method</h3>
+                    <p style="margin-top:0.5rem;">Treats each purchase as a row with easy-to-read features.</p>
+                    <ul>
+                        <li><strong>Best for:</strong> quick, explainable decisions</li>
+                        <li><strong>Data:</strong> transaction tables</li>
+                        <li><strong>Result:</strong> ~65% accuracy</li>
+                    </ul>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+        st.markdown("### 🎛️ Quick Visual Comparison")
+        cc1, cc2 = st.columns(2)
+        with cc1:
+            st.markdown("**ASOS Accuracy (approx.)**")
+            st.progress(75)
+        with cc2:
+            st.markdown("**TheLook Accuracy (approx.)**")
+            st.progress(65)
+
+    # 2) SIDE-BY-SIDE TAB
+    with tab_side:
+        st.markdown("### ⚖️ Head-to-Head")
+        df = pd.DataFrame(
+            {
+                "Aspect": [
+                    "Data Type",
+                    "Accuracy",
+                    "Interpretability",
+                    "Business Use",
+                    "Technical Complexity",
+                    "Data Requirements",
+                ],
+                "ASOS (Graph)": [
+                    "Customer–Product Network",
+                    "~75%",
+                    "Moderate (relationships)",
+                    "Customer segments, patterns",
+                    "High",
+                    "Needs interaction links",
+                ],
+                "TheLook (Tabular)": [
+                    "Row-per-Transaction",
+                    "~65%",
+                    "High (clear features)",
+                    "Operations, quick wins",
+                    "Low",
+                    "Standard tables",
+                ],
+            }
+        )
+        st.dataframe(df, use_container_width=True)
+
+        k1, k2 = st.columns(2)
+        with k1:
+            st.markdown(
+                """
+                <div class="insight-box" style="color:black;">
+                    <h4>Why ASOS wins</h4>
+                    <ul>
+                        <li>Finds clusters of similar buyers/products</li>
+                        <li>Captures "who likes what" patterns</li>
+                        <li>Useful for recommendations and targeting</li>
+                    </ul>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+        with k2:
+            st.markdown(
+                """
+                <div class="insight-box" style="color:black;">
+                    <h4>Why TheLook wins</h4>
+                    <ul>
+                        <li>Fast to build and explain</li>
+                        <li>Clear feature effects (e.g., category, season)</li>
+                        <li>Easier adoption for business teams</li>
+                    </ul>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+    # 3) PERFORMANCE TAB
+    with tab_perf:
+        st.markdown("### 📊 Model Performance Snapshots")
+        p1, p2 = st.columns(2)
+        with p1:
+            st.markdown("#### ASOS (Graph Models)")
+            st.image(os.path.join(BASE_DIR, "img", "confusion_matrix_rf.png"))
+            st.image(os.path.join(BASE_DIR, "img", "feature_importance_rf.png"))
+        with p2:
+            st.markdown("#### TheLook (Tabular Models)")
+            st.image(os.path.join(BASE_DIR, "img", "ROC.png"))
+            st.markdown(
+                """
+                <div class="metric-card" style="color:black;">
+                    <ul>
+                        <li><strong>Logistic Regression:</strong> baseline, easy to interpret</li>
+                        <li><strong>XGBoost:</strong> stronger non-linear patterns (ROC-AUC ~0.655)</li>
+                    </ul>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+    # 4) WHEN TO USE TAB
+    with tab_when:
+        st.markdown("### 🎯 Choose the Right Tool")
+        w1, w2 = st.columns(2)
+        with w1:
+            st.markdown(
+                """
+                <div class="insight-box" style="color:black;">
+                    <h4>Use ASOS (Graph) if you:</h4>
+                    <ul>
+                        <li>Have rich interaction data</li>
+                        <li>Care about relationships and communities</li>
+                        <li>Plan recommendations/segment strategies</li>
+                    </ul>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+        with w2:
+            st.markdown(
+                """
+                <div class="insight-box" style="color:black;">
+                    <h4>Use TheLook (Tabular) if you:</h4>
+                    <ul>
+                        <li>Need quick, explainable results</li>
+                        <li>Have standard transaction tables</li>
+                        <li>Want easy communication with stakeholders</li>
+                    </ul>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+    # 5) NEXT STEPS TAB
+    with tab_next:
+        st.markdown("### 🚀 Recommended Roadmap")
+        st.markdown(
+            """
+            <div class="dataset-card" style="color:black;">
+                <ol>
+                    <li><strong>Start Tabular:</strong> deploy a simple model for quick wins</li>
+                    <li><strong>Collect Signals:</strong> track interactions (user–product)</li>
+                    <li><strong>Add Graphs:</strong> build a graph model for deeper insights</li>
+                    <li><strong>Combine:</strong> use both for the best performance and coverage</li>
+                </ol>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
 # Footer
 st.markdown("---")
