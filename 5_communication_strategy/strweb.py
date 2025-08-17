@@ -171,48 +171,47 @@ elif selected_dataset == "📦 ASOS Dataset":
     # Visualizations section
     st.markdown("### 📊 Data Visualizations")
     
-    # Create tabs for different visualizations
-    tab1, tab2, tab3, tab4 = st.tabs(["Return Patterns", "Customer Analysis", "Product Insights", "Geographic Trends"])
-    
+    # Create tabs for different visualizations, now with Model Performance tab
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+        "Return Patterns", "Customer Analysis", "Product Insights", "Geographic Trends", "Model Performance"
+    ])
+
     with tab1:
-        st.markdown("#### Return Frequency Distribution")
-        st.image(os.path.join(BASE_DIR, "return_frequency.png"))
-        
-        st.markdown("#### Return Rate Distribution")
-        st.image(os.path.join(BASE_DIR, "return_rate_distribution.png"))
-    
+        st.markdown("#### Average Discount Value")
+        st.image(os.path.join(BASE_DIR,"img", "avgDiscountValue_by_return_status.png"))
+
+        st.markdown("#### Average Gbp Price")
+        st.image(os.path.join(BASE_DIR,"img", "avgGbpPrice_by_return_status.png"))
+
     with tab2:
         st.markdown("#### Return Rates by Age Group")
-        st.image(os.path.join(BASE_DIR, "return_rate_by_age_group.png"))
-        
+        st.image(os.path.join(BASE_DIR,"img", "return_rate_by_age.png"))
+
         st.markdown("#### Customer Return Behavior")
-        st.image(os.path.join(BASE_DIR, "customer_behavior_analysis.png"))
-    
+        st.image(os.path.join(BASE_DIR,"img", "return_rate_per_customer.png"))
+
     with tab3:
         st.markdown("#### Top Product Types by Return Rate")
-        st.image(os.path.join(BASE_DIR, "Top 10 Product Types by Return Rate.png"))
-        
+        st.image(os.path.join(BASE_DIR,"img", "Top10_Product_Types_by_Return_Rate.png"))
+
         st.markdown("#### Top Brands by Return Rate")
-        st.image(os.path.join(BASE_DIR, "Top 10 Brands by Return Rate.png"))
-    
+        st.image(os.path.join(BASE_DIR,"img", "Brands_by_Return_Rate.png"))
+
     with tab4:
         st.markdown("#### Shipping Countries by Return Rate")
-        st.image(os.path.join(BASE_DIR, "Top 10 Shipping Countries by Return Rate.png"))
-    
-    # Model Performance
-    st.markdown("### 🎯 Model Performance")
-    
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        st.markdown("#### Logistic Regression Results")
-        st.image(os.path.join(BASE_DIR, "confusion_matrix_logistic.png"))
-        st.image(os.path.join(BASE_DIR, "feature_importance_logistic.png"))
-    
-    with col2:
-        st.markdown("#### Random Forest Results")
-        st.image(os.path.join(BASE_DIR, "confusion_matrix_rf.png"))
-        st.image(os.path.join(BASE_DIR, "feature_importance_rf.png"))
+        st.image(os.path.join(BASE_DIR,"img", "Top 10 Shipping Countries by Return Rate.png"))
+
+    with tab5:
+        st.markdown("### 🎯 Model Performance")
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown("#### Logistic Regression Results")
+            st.image(os.path.join(BASE_DIR,"img", "confusion_matrix_logistic.png"))
+            st.image(os.path.join(BASE_DIR,"img", "Feature importance.png"))
+        with col2:
+            st.markdown("#### Random Forest Results")
+            st.image(os.path.join(BASE_DIR, "img", "confusion_matrix_rf.png"))
+            st.image(os.path.join(BASE_DIR,"img", "feature_importance_rf.png"))
 
 # TheLook Dataset Section
 elif selected_dataset == "🛒 TheLook Dataset":
