@@ -4,7 +4,7 @@ This document consolidates our team’s reflections across **Milestones 0, 1, 2,
 
 ---
 
-##  milestone 0: 🤝 Cross-Cultural Collaboration (June 6 – June 12, 2025)
+##  Milestone 0: 🤝 Cross-Cultural Collaboration (June 6 – June 12, 2025)
 
 **Goal:** Establish team dynamics, set up the GitHub repository, and select the E-commerce Returns Prediction and Reduction research question.
 
