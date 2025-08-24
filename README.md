@@ -8,6 +8,33 @@ The name? A cheeky nod to how we feel sometimes. But while we may be new to the 
 
 ---
 
+## 📚 Table of Contents
+
+*   [🛒 Problem Background: Returns in E-commerce](#-problem-background-returns-in-e-commerce)
+*   [📦 Returns Prediction: Graph-Based vs Tabular E-Commerce Modeling](#-returns-prediction-graph-based-vs-tabular-e-commerce-modeling)
+*   [🧠 Modeling Approaches: Why Two Methods?](#-modeling-approaches-why-two-methods)
+    *   [A. Tabular Modeling (TheLook Dataset)](#-a-tabular-modeling-thelook-dataset)
+    *   [B. Graph Modeling (ASOS Dataset)](#-b-graph-modeling-asos-dataset)
+*   [📁 Dataset Documentation](#-dataset-documentation)
+    *   [A. ASOS GraphReturns Dataset](#a-asos-graphreturns-dataset)
+    .   [B. TheLook E-Commerce Dataset](#b-thelook-e-commerce-dataset)
+*   [📊 Summary Table](#-summary-table)
+*   [🛍️ E-commerce Product Return Analysis – Data Preparation](#️-e-commerce-product-return-analysis--data-preparation)
+    *   [📦 ASOS GraphReturns – Data Preparation](#-asos-graphreturns--data-preparation)
+    *   [📦 TheLook E-commerce – Data Preparation](#-thelook-e-commerce--data-preparation)
+*   [📁 Folder Structure](#-folder-structure)
+*   [📈 Data Exploration & Insights](#-data-exploration--insights)
+    *   [ASOS GraphReturns](#asos-graphreturns)
+    *   [TheLook E-commerce](#thelook-e-commerce)
+*   [🤖 Predictive Modeling & Results](#-predictive-modeling--results)
+    *   [ASOS (Graph-Based)](#asos-graph-based)
+    *   [TheLook (Tabular)](#thelook-tabular)
+*   [💡 Key Takeaways](#-key-takeaways)
+*   [👨‍👩‍👧‍👦 Team of Imposters](#-team-of-imposters)
+*   [📜 License](#-license)
+
+---
+
 ## 🛒 Problem Background: Returns in E-commerce
 
 Product returns are a major challenge for online retailers, costing companies **billions** annually—not just in lost sales, but also in **reverse logistics**, **inventory disruption**, **fraud**, and **environmental waste**. Managing returns impacts profitability and customer satisfaction, requiring robust data-driven solutions.
@@ -94,21 +121,21 @@ We engineered modeling-ready datasets for both approaches:
 ## 📁 Folder Structure
 
 ```
-├── 01_data_preparation.ipynb
-├── 02_exploratory_data_analysis.ipynb
-├── 03_feature_engineering.ipynb
-├── 04_modeling.ipynb
-├── data
-│   ├── asos_merged_training.csv
-│   ├── thelook_returns_features.csv
-│   ├── order_items.csv
-│   ├── products.csv
-│   ├── users.csv
-│   └── distribution_centers.csv
-├── reports
-│   ├── figures
-│   └── tables
-└── README.md
+.
+├── 0_domain_study
+├── 1_datasets
+├── 2_data_preparation
+├── 3_data_exploration
+├── 4_data_analysis
+├── 5_communication_strategy
+├── 6_final_presentation
+├── collaboration
+├── notes
+├── .github
+├── .vscode
+├── LICENSE
+├── README.md
+└── ... (other configuration files)
 ```
 
 ---

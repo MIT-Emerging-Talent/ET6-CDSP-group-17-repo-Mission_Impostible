@@ -1,7 +1,26 @@
 # 🛍️ ASOS & TheLook E-commerce Product Return Analysis
 
-This repository documents advanced analysis and predictive modeling for two e-commerce datasets:  
-- **ASOS GraphReturns Dataset**  
+## 📚 Table of Contents
+
+*   [📦 ASOS Product Return Analysis](#-asos-product-return-analysis)
+    *   [Modeling & Results](#-modeling--results)
+    *   [🔍 Key Predictive Features](#-key-predictive-features)
+    *   [⚠️ Limitations](#️-limitations)
+    *   [✅ Impact](#-impact)
+    *   [📂 How to Run the Project](#-how-to-run-the-project)
+*   [🛍️ TheLook E-commerce Return Prediction](#️-thelook-e-commerce-return-prediction)
+    *   [📊 Analysis Workflow](#-analysis-workflow)
+    *   [🎯 Model Results](#-model-results)
+    *   [💡 Key Features](#-key-features)
+    *   [📈 Data Overview](#-data-overview)
+    *   [📊 Visuals Generated](#-visuals-generated)
+    *   [💼 Recommendations](#-recommendations)
+*   [🔧 Technical Requirements](#-technical-requirements)
+*   [📂 Data Analysis Sub-directories](#-data-analysis-sub-directories)
+
+
+This repository documents advanced analysis and predictive modeling for two e-commerce datasets:
+- **ASOS GraphReturns Dataset**
 - **TheLook E-commerce Dataset**
 
 Both projects aim to understand and predict product returns using customer, product, and transaction features.
@@ -40,19 +59,19 @@ Three models were evaluated using ROC AUC:
 
 ### ⚠️ Limitations
 
-- Missing shipping data  
-- External factors (e.g., fashion trends) not included  
+- Missing shipping data
+- External factors (e.g., fashion trends) not included
 - Predictions are probabilistic
 
 ### ✅ Impact
 
-- Smarter inventory planning  
-- Improved sizing guidance  
+- Smarter inventory planning
+- Improved sizing guidance
 - Reduced logistics costs
 ### 📂 How to Run the Project
 
-1. Download the dataset from the [OSF ASOS Dataset](https://osf.io/c793h/)  
-2. Run the provided script: `ASOS_Data_Analysis.ipynb`  
+1. Download the dataset from the [OSF ASOS Dataset](https://osf.io/c793h/)
+2. Run the provided script: `ASOS_Data_Analysis.ipynb`
 3. Artifacts (plots, metrics, SHAP feature importance, predictions) are saved in the `Models` folder
 
 ---
@@ -61,17 +80,17 @@ Three models were evaluated using ROC AUC:
 
 ### 📊 Analysis Workflow
 
-1. Data loading & feature checks  
-2. Feature engineering  
-3. Logistic Regression (baseline)  
-4. XGBoost modeling (advanced)  
-5. Model evaluation: ROC, F1, precision/recall  
-6. Feature importance (XGBoost & SHAP)  
-7. Summary of key findings  
-8. Exploratory Data Analysis  
-9. Error diagnostics by category & geography  
-10. Robustness checks (cross-validation)  
-11. Model improvement suggestions  
+1. Data loading & feature checks
+2. Feature engineering
+3. Logistic Regression (baseline)
+4. XGBoost modeling (advanced)
+5. Model evaluation: ROC, F1, precision/recall
+6. Feature importance (XGBoost & SHAP)
+7. Summary of key findings
+8. Exploratory Data Analysis
+9. Error diagnostics by category & geography
+10. Robustness checks (cross-validation)
+11. Model improvement suggestions
 
 ---
 
@@ -86,34 +105,34 @@ Three models were evaluated using ROC AUC:
 
 ### 💡 Key Features
 
-- Product Category (strongest predictor)  
-- Discount %, Basket Size, Tenure  
-- Seasonal & regional return patterns  
-- High error rates in Underwear, Plus sizes, Japan  
+- Product Category (strongest predictor)
+- Discount %, Basket Size, Tenure
+- Seasonal & regional return patterns
+- High error rates in Underwear, Plus sizes, Japan
 
 ---
 
 ### 📈 Data Overview
 
-- 180,952 records, 18 features  
-- Target: RETURN_FLAG (10% positive class)  
-- Missing data in: bin, ship_latency_days, tenure_days  
+- 180,952 records, 18 features
+- Target: RETURN_FLAG (10% positive class)
+- Missing data in: bin, ship_latency_days, tenure_days
 
 ---
 
 ### 📊 Visuals Generated
 
-- ROC, PR curves  
-- Feature distributions (by return status)  
-- Confusion matrices & learning curves  
+- ROC, PR curves
+- Feature distributions (by return status)
+- Confusion matrices & learning curves
 
 ---
 
 ### 💼 Recommendations
 
-- Improve sizing/fit for high-return categories  
-- Target interventions for new customers & high-risk geographies  
-- Regularly monitor and retrain models  
+- Improve sizing/fit for high-return categories
+- Target interventions for new customers & high-risk geographies
+- Regularly monitor and retrain models
 
 ---
 
@@ -121,3 +140,10 @@ Three models were evaluated using ROC AUC:
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn xgboost shap
+```
+
+---
+## 📂 Data Analysis Sub-directories
+
+*   [ASOS_GraphReturns](./ASOS_GraphReturns)
+*   [theLook_Ecommerce](./theLook_Ecommerce)

@@ -1,9 +1,32 @@
 # 🛍️ E-commerce Product Return Analysis – Data Preparation
 
+## 📚 Table of Contents
+
+*   [📦 Dataset 1: ASOS GraphReturns – Data Preparation](#-dataset-1-asos-graphreturns--data-preparation)
+    *   [🗂 Overview](#-overview)
+    *   [📁 Input Files](#-input-files)
+    *   [🧪 Output File](#-output-file)
+    *   [📌 Key Steps](#-key-steps)
+    *   [✅ Dependencies](#-dependencies)
+    *   [▶️ How to Run](#️-how-to-run)
+    *   [📊 Merging Process Diagram](#-merging-process-diagram)
+*   [📦 Dataset 2: TheLook E-commerce – Data Preparation](#-dataset-2-thelook-e-commerce--data-preparation)
+    *   [📑 What This Notebook Does](#-what-this-notebook-does)
+    *   [📁 Input Files](#-input-files-1)
+    *   [🧪 Output File](#-output-file-1)
+    *   [📌 Key Steps](#-key-steps-1)
+    *   [🎯 Target Variable](#-target-variable)
+    *   [🚀 How to Run](#-how-to-run)
+    *   [⚠️ Notes & Assumptions](#️-notes--assumptions)
+*   [📁 Folder Structure](#-folder-structure)
+*   [📂 Data Preparation Sub-directories](#-data-preparation-sub-directories)
+*   [📜 License](#-license)
+
+
 This repository contains data preparation workflows for two e-commerce datasets used in product return prediction projects:
 
-1. **ASOS GraphReturns Dataset**
-2. **TheLook E-commerce Dataset**
+1.  **ASOS GraphReturns Dataset**
+2.  **TheLook E-commerce Dataset**
 
 Both notebooks clean, merge, and engineer modeling-ready datasets for downstream machine learning tasks such as return classification.
 
@@ -45,9 +68,9 @@ Uploaded via Google Colab interface:
 
 ### ▶️ How to Run
 
-1. Open `01_data_preparation.ipynb` in **Google Colab**.
-2. Upload the `.p` files when prompted.
-3. The notebook will output `asos_merged_training.csv`.
+1.  Open `01_data_preparation.ipynb` in **Google Colab**.
+2.  Upload the `.p` files when prompted.
+3.  The notebook will output `asos_merged_training.csv`.
 
 ### 📊 Merging Process Diagram
 
@@ -91,19 +114,19 @@ Located under `1_datasets/thelook_Ecommerce/`:
 
 ### 🎯 Target Variable
 
-- `RETURN_FLAG`  
-  - `1` = returned  
+- `RETURN_FLAG`
+  - `1` = returned
   - `0` = kept
 
 ### 🚀 How to Run
 
-1. Clone the repository and install required libraries:
-   ```bash
-   pip install pandas numpy matplotlib ipython
-   ```
-2. Open `TheLook_Data_Preparation.ipynb` in Jupyter Notebook or VS Code.
-3. Run all cells.
-4. Check the output file in `2_data_preparation/theLook_Ecommerce/`.
+1.  Clone the repository and install required libraries:
+    ```bash
+    pip install pandas numpy matplotlib ipython
+    ```
+2.  Open `TheLook_Data_Preparation.ipynb` in Jupyter Notebook or VS Code.
+3.  Run all cells.
+4.  Check the output file in `2_data_preparation/theLook_Ecommerce/`.
 
 ### ⚠️ Notes & Assumptions
 
@@ -117,15 +140,24 @@ Located under `1_datasets/thelook_Ecommerce/`:
 ## 📁 Folder Structure
 
 ```
-├── 2_data_preparation/
-│   ├── asos_graphreturns/
-│   │   └── ASOS_DATA_Preparation.ipynb
-│   └── thelook_Ecommerce/
+.
+├── 2_data_preparation
+│   ├── ASOS_GraphReturns
+│   │   ├── prepare_asos.ipynb
+│   │   └── ...
+│   └── theLook_Ecommerce
 │       ├── theLookdata_preparation.ipynb
-│       └── thelook_returns_features.csv
-│
-└── README.md  ← (You are here)
+│       └── ...
+└── README.md
 ```
+
+---
+## 📂 Data Preparation Sub-directories
+
+*   [ASOS_GraphReturns](./ASOS_GraphReturns)
+*   [theLook_Ecommerce](./theLook_Ecommerce)
+
+---
 
 ## 📜 License
 [MIT License](LICENSE)

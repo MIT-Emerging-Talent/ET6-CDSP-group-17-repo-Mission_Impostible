@@ -1,9 +1,23 @@
 # 🔍 E-commerce Product Return Analysis – Data Exploration
 
+## 📚 Table of Contents
+
+*   [📊 Dataset 1: ASOS GraphReturns – Customer Return Behavior Analysis](#-dataset-1-asos-graphreturns--customer-return-behavior-analysis)
+    *   [🗂 Overview](#-overview)
+    *   [🧑‍💻 Non-Technical Summary](#-non-technical-summary)
+    *   [📈 Key Visualizations](#-key-visualizations)
+*   [📦 Dataset 2: TheLook E-commerce – Data Exploration](#-dataset-2-thelook-e-commerce--data-exploration)
+    *   [🧾 What We Did](#-what-we-did)
+    *   [🔍 Key Steps & Insights](#-key-steps--insights)
+    *   [📉 Numeric Feature Distributions](#-numeric-feature-distributions)
+    *   [🔥 Correlation Heatmap](#-correlation-heatmap)
+*   [📌 Early Takeaways](#-early-takeaways)
+*   [📂 Data Exploration Sub-directories](#-data-exploration-sub-directories)
+
 This repository documents exploratory data analysis (EDA) steps for two datasets used in product return prediction:
 
-1. **ASOS GraphReturns Dataset**
-2. **TheLook E-commerce Dataset**
+1.  **ASOS GraphReturns Dataset**
+2.  **TheLook E-commerce Dataset**
 
 These notebooks provide visual and statistical insights into return behavior, highlighting key trends across demographics, geography, and product categories.
 
@@ -82,6 +96,12 @@ Numeric variables show weak linear correlations with `RETURN_FLAG`, implying tha
 - Numeric features support modeling, but are not strong predictors alone.
 
 These insights lay the foundation for building robust models and targeted interventions in the upcoming analysis phase.
+
+---
+## 📂 Data Exploration Sub-directories
+
+*   [ASOS_GraphReturns](./ASOS_GraphReturns)
+*   [theLook_Ecommerce](./theLook_Ecommerce)
 
 ---
 
