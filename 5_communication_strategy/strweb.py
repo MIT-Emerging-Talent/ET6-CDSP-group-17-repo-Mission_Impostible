@@ -640,5 +640,6 @@ st.markdown("""
 <div style="text-align: center; color: #666; margin-top: 2rem;">
     <p>📊 E-commerce Returns Prediction Analysis | Built with Streamlit</p>
     <p>🎯 Helping businesses understand and reduce product returns through data science</p>
+    <p>🔗 <a href="https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-17-repo-Mission_Impostible.git" target="_blank">View our Repository on GitHub</a></p>
 </div>
 """, unsafe_allow_html=True)
