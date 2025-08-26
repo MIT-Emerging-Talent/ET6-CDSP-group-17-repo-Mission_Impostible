@@ -5,7 +5,7 @@
 <details>
 <summary><strong>Why this strategy?</strong></summary>
 
-This strategy helps communicate the ASOS Return Prediction results to a non-technical audience. It ensures insights are clear, actionable, and tailored to stakeholder needs.
+This strategy helps communicate the Return Prediction results to a non-technical audience. It ensures insights are clear, actionable, and tailored to stakeholder needs.
 
 </details>
 
