@@ -75,11 +75,33 @@ st.markdown("""
 st.sidebar.title("📊 Navigation")
 selected_dataset = st.sidebar.radio(
     "Choose a dataset to explore:",
-    ["🏠 Overview", "📦 ASOS Dataset", "🛒 TheLook Dataset", "📈 Comparison"]
+    [
+        "📖 Main Page",
+        "🏠 Overview",
+        "📦 ASOS Dataset",
+        "🛒 TheLook Dataset",
+        "📈 Comparison",
+        "🚀 Insights to Action"
+    ]
 )
 
+if selected_dataset == "📖 Main Page":
+    st.markdown("## 🛍️ Predicting Product Returns in Fashion E-Commerce")
+    st.markdown("""
+**Why This Problem Matters**
+
+Fashion e-commerce faces high product return rates, costing businesses billions each year. Returns impact profit, logistics, and customer satisfaction. By predicting which items are likely to be returned, companies can:
+
+- Reduce unnecessary shipping and handling costs
+- Improve product listings and sizing guides
+- Enhance customer trust and experience
+- Make smarter inventory and marketing decisions
+
+Our project explores two different data-driven methods to predict returns, using real-world datasets from leading online retailers.
+""")
+
 # Overview Section
-if selected_dataset == "🏠 Overview":
+elif selected_dataset == "🏠 Overview":
     st.markdown("## 🎯 Project Overview")
     
     col1, col2 = st.columns(2)
@@ -203,6 +225,42 @@ elif selected_dataset == "📦 ASOS Dataset":
 
     with tab5:
         st.markdown("### 🎯 Model Performance")
+        st.markdown("""
+<table border="1" class="dataframe" style="width:80%; text-align:center; margin:auto; border-collapse:collapse;">
+  <thead style="">
+    <tr>
+      <th></th>
+      <th>Accuracy</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>ROC AUC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>XGBoost</td>
+      <td>74.2%</td>
+      <td>75.1%</td>
+      <td>79.8%</td>
+      <td>82.5%</td>
+    </tr>
+    <tr>
+      <td>Logistic Regression</td>
+      <td>73.9%</td>
+      <td>74.9%</td>
+      <td>79.3%</td>
+      <td>82.0%</td>
+    </tr>
+    <tr>
+      <td>Random Forest</td>
+      <td>72.5%</td>
+      <td>74.2%</td>
+      <td>77.1%</td>
+      <td>80.1%</td>
+    </tr>
+  </tbody>
+</table>
+""", unsafe_allow_html=True)
         col1, col2 = st.columns(2)
         with col1:
             st.markdown("#### Logistic Regression Results")
@@ -564,11 +622,24 @@ elif selected_dataset == "📈 Comparison":
             unsafe_allow_html=True,
         )
 
+# Insights to Action Section
+elif selected_dataset == "🚀 Insights to Action":
+    st.markdown("## 🚀 Turning Insights into Action")
+    st.markdown("""
+Use these findings to drive real business value:
+
+- ✅ **Improve Product Pages:** Use predictions to flag high-return items and add better sizing, photos, or descriptions.
+- 📦 **Optimize Logistics:** Preemptively adjust inventory and shipping strategies for likely returns.
+- 💬 **Personalize Communication:** Proactively reach out to customers who may need help with fit or product selection.
+- 🌍 **Sustainable Practices:** Reduce environmental impact by minimizing unnecessary shipments and returns.
+""")
+
 # Footer
 st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #666; margin-top: 2rem;">
     <p>📊 E-commerce Returns Prediction Analysis | Built with Streamlit</p>
     <p>🎯 Helping businesses understand and reduce product returns through data science</p>
+    <p>🔗 <a href="https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-17-repo-Mission_Impostible.git" target="_blank">View our Repository on GitHub</a></p>
 </div>
 """, unsafe_allow_html=True)
