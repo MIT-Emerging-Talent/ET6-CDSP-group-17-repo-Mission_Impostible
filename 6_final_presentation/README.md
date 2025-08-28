@@ -1,4 +1,4 @@
-#  النهائية Final Presentation
+#Final Presentation
 
 This directory contains the final presentation for the project.
 
@@ -52,4 +52,4 @@ This directory contains the final presentation for the project.
 
 ## Presentation
 
-*   [Link to the final presentation](https://docs.google.com/presentation/d/1GPk4_QpO7Gsd5OA8nlwXOB8Aq1wA7i_g/edit?slide=id.p9#slide=id.p9) (replace with the actual link to your presentation)
+*   [Link to the final presentation](https://docs.google.com/presentation/d/1GPk4_QpO7Gsd5OA8nlwXOB8Aq1wA7i_g/edit?slide=id.p1#slide=id.p1)
