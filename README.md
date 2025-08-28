@@ -184,11 +184,10 @@ We engineered modeling-ready datasets for both approaches:
 
 ---
 
-## 👨‍👩‍👧‍👦 Team of Imposters
-
-- [Shadi Shahab]
-- [Pyae Linn]
-- [Derek Karungani]
+👥 **Team of Imposters:**  
+- Shadi Shadabshoar — [LinkedIn](https://www.linkedin.com/in/shadi-shadabshoar/)  
+- Pyae Linn — [LinkedIn](https://www.linkedin.com/in/pyae-linn-2419a62a4/)  
+- Derek Karungani  
 
 ---
 
