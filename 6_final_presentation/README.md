@@ -1,4 +1,15 @@
+🚀 Predicting and reducing online fashion returns with data, because clothes should stay in closets, not return boxes!
+
+---
+
 # Final Presentation  
+
+This directory contains the final presentation for our project.  
+
+---
+
+## 🔎 Quick Summary (for recruiters & readers)  
+In this project, we investigated the hidden costs of product returns in online fashion retail. Using real-world e-commerce datasets (ASOS and TheLook), we identified the strongest predictors of returns, debunked common myths, and designed strategies to reduce them. Our work combines **data analysis, machine learning, and science communication** — including an interactive website — to show how data can solve a real business problem.  
 
 ---
 
@@ -10,6 +21,7 @@
 * [Conclusion](#conclusion)  
 * [Future Work](#future-work)  
 * [Presentation](#presentation)  
+* [Key Skills Demonstrated](#key-skills-demonstrated)  
 
 ---
 
@@ -80,6 +92,16 @@ Potential next steps:
 🎥 View the final slides here: [Final Presentation](https://docs.google.com/presentation/d/1GPk4_QpO7Gsd5OA8nlwXOB8Aq1wA7i_g/edit?slide=id.p1#slide=id.p1)  
 
 🌐 Explore our interactive communication artifact: [Streamlit App](https://cdsp17.streamlit.app/)  
+
+---
+
+## Key Skills Demonstrated  
+- **Data Science & Machine Learning**: Logistic regression, random forest, predictive modeling.  
+- **Data Wrangling & Analysis**: Pandas, NumPy, feature engineering, class imbalance handling.  
+- **Data Visualization**: Matplotlib, Seaborn, and interactive dashboards.  
+- **Communication & Storytelling**: Turning technical insights into engaging narratives and visual reports.  
+- **Tools & Platforms**: Python, Jupyter Notebooks, Streamlit, GitHub, Google Slides.  
+- **Collaboration**: Agile teamwork, milestone planning, peer feedback integration.  
 
 ---
 
