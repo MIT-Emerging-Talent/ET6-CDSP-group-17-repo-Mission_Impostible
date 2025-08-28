@@ -1,55 +1,91 @@
-#Final Presentation
-
-This directory contains the final presentation for the project.
-
-## 📚 Table of Contents
-
-*   [Introduction](#introduction)
-*   [Problem Statement](#problem-statement)
-*   [Methodology](#methodology)
-*   [Results](#results)
-*   [Conclusion](#conclusion)
-*   [Future Work](#future-work)
-*   [Presentation](#presentation)
+# Final Presentation  
 
 ---
 
-## Introduction
-
-*   A brief introduction to the project and the team.
-
----
-
-## Problem Statement
-
-*   A clear and concise statement of the problem the project is trying to solve.
-
----
-
-## Methodology
-
-*   An overview of the methodology used in the project, including the datasets, tools, and techniques.
+## 📚 Table of Contents  
+* [Introduction](#introduction)  
+* [Problem Statement](#problem-statement)  
+* [Methodology](#methodology)  
+* [Results](#results)  
+* [Conclusion](#conclusion)  
+* [Future Work](#future-work)  
+* [Presentation](#presentation)  
 
 ---
 
-## Results
+## Introduction  
+We are **Group 17 – Return Avengers: Mission Impostible**, a team of students at MIT Emerging Talent.  
+Our mission: *to uncover why fashion e-commerce suffers from high return rates, and how data-driven insights can help retailers fight back.*  
 
-*   A summary of the key results and findings of the project.
-
----
-
-## Conclusion
-
-*   A conclusion that summarizes the main takeaways of the project.
+Fashion returns are like bad dates: expensive, awkward, and nobody wins. With this project, we combined storytelling, data science, and a touch of spy humor to explore how returns can be predicted and prevented.  
 
 ---
 
-## Future Work
+## Problem Statement  
+**Research Question:**  
+*Which customer and product features best predict product returns in e-commerce, and how can retailers use this to reduce returns?*  
 
-*   A discussion of potential future work that could be done to build on the project.
+Why it matters:  
+- Returns = 👻 Profit eaters, 📦 Inventory hostages, 😤 Customer satisfaction killers.  
+- Fashion e-commerce return rates can reach 30–40%, creating huge financial and operational challenges.  
 
 ---
 
-## Presentation
+## Methodology  
+We followed a detective-style process to uncover the “villains” behind returns:  
 
-*   [Link to the final presentation](https://docs.google.com/presentation/d/1GPk4_QpO7Gsd5OA8nlwXOB8Aq1wA7i_g/edit?slide=id.p1#slide=id.p1)
+- **Datasets**: ASOS and TheLook datasets (educational use).  
+- **Analysis**: Explored features such as customer behavior, product attributes, and country differences.  
+- **Techniques**: Data cleaning, exploratory data analysis, feature engineering, and return prediction modeling.  
+- **Framing**: Communicated insights using storytelling and an interactive artifact.  
+
+---
+
+## Results  
+Our investigation revealed three main “villains”:  
+
+1. **Your past predicts your future** 🔄 — Customers who returned before are highly likely to return again.  
+2. **Some clothes are return magnets** 👖 — Jeans and certain brands drive disproportionate return rates.  
+3. **Location, location, frustration** 🌍 — Returns vary significantly by country due to sizing and cultural differences.  
+
+🚫 **What doesn’t matter (myth-busting):**  
+- Gender  
+- Age  
+- Premier membership  
+
+---
+
+## Conclusion  
+Returns aren’t fate — they’re feedback.  
+By focusing on **customer history, product-level risk, and better communication**, retailers can reduce returns and improve both profit margins and customer satisfaction.  
+
+Key recommendations for retailers:  
+- Improve product pages (better fit notes, model photos).  
+- Localize size charts.  
+- Add smart nudges at checkout.  
+- Work with high-return brands to improve sizing consistency.  
+
+---
+
+## Future Work  
+Potential next steps:  
+- Expand research with data from additional retailers beyond ASOS.  
+- Explore the role of sustainability in reducing returns.  
+- Refine predictive models with deeper product attributes (fabric, cut, fit).  
+- Test communication strategies directly with customers.  
+
+---
+
+## Presentation  
+🎥 View the final slides here: [Final Presentation](https://docs.google.com/presentation/d/1GPk4_QpO7Gsd5OA8nlwXOB8Aq1wA7i_g/edit?slide=id.p1#slide=id.p1)  
+
+🌐 Explore our interactive communication artifact: [Streamlit App](https://cdsp17.streamlit.app/)  
+
+---
+
+👥 **Team of Imposters:**  
+- Shadi Shadabshoar — [LinkedIn](https://www.linkedin.com/in/shadi-shadabshoar/)  
+- Pyae Linn — [LinkedIn](https://www.linkedin.com/in/pyae-linn-2419a62a4/)  
+- Derek Karungani  
+
+---
