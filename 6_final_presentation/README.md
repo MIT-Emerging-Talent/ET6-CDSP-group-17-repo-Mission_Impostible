@@ -8,7 +8,7 @@ This directory contains the final presentation for our project.
 
 ---
 
-## 🔎 Quick Summary (for recruiters & readers)  
+## 🔎 Quick Summary 
 In this project, we investigated the hidden costs of product returns in online fashion retail. Using real-world e-commerce datasets (ASOS and TheLook), we identified the strongest predictors of returns, debunked common myths, and designed strategies to reduce them. Our work combines **data analysis, machine learning, and science communication** — including an interactive website — to show how data can solve a real business problem.  
 
 ---
